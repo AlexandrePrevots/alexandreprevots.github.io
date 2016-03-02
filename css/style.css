@@ -117,10 +117,12 @@ ul {
   font-size: 3em;
   color: #f44336;
 }
+#section1 section {
+  margin-bottom: 12%!important;
+}
 .about-title {
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 12%!important;
 }
 .about-img div {
   width: 80px;
