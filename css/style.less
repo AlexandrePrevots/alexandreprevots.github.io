@@ -13,9 +13,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-ul{
+ul {
     margin-left: 0!important;
 }
+
 
 /* SECTIONS */
 
@@ -27,8 +28,7 @@ ul{
 
 #section1,
 #section2,
-#section3,
-#section4 {
+#section3 {
     background: @color-secondary;
     color: @color-primary;
     min-height: 100vh;
@@ -55,13 +55,15 @@ ul{
     float: left;
     width: 214px;
     height: 80px;
-    line-height:80px;
-    text-align:center;
+    line-height: 80px;
+    text-align: center;
 }
-.menu .logo img{
+
+.menu .logo img {
     vertical-align: middle;
     max-height: 50px;
 }
+
 
 /*  
     ------------
@@ -81,7 +83,8 @@ ul{
 .intro h1 {
     font-size: 2em;
 }
-.intro p{
+
+.intro p {
     font-size: 1.4em;
 }
 
@@ -122,35 +125,83 @@ ul{
     2eme section : Formations + Expériences
     ---------------------------------------
 */
-#section1 h1{
+
+#section1 h1 {
     text-align: center;
     font-weight: 200;
+    font-size: 4em;
     color: @color-tertiary;
 }
-.about-title{
-    width: 50%;
+
+#section1 h2 {
+    font-weight: 200;
+    font-size: 3em;
+    color: @color-tertiary;
+}
+
+.about-title {
     text-align: center;
     margin: 0 auto;
-
+    margin-bottom: 12%!important;
 }
+.about-img div{
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    margin-right: 2%;
+}
+.photoshop{
+    background-image: url("../img/svg/photoshop.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.photoshop:hover{
+    background-image: url("../img/svg/photoshop-hover.svg");
+}
+.illustrator{
+    background-image: url("../img/svg/illustrator.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.illustrator:hover{
+    background-image: url("../img/svg/illustrator-hover.svg");
+}
+.indesign{
+    background-image: url("../img/svg/indesign.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.indesign:hover{
+    background-image: url("../img/svg/indesign-hover.svg");
+}
+
 
 /*  
     ----------------------
     3eme section : Galerie
     ----------------------
 */
+
+
 /*Content-filter*/
-.cd-tab-filter-wrapper{
+
+.cd-tab-filter-wrapper {
     background: transparent;
 }
-.cd-tab-filter a{
+
+.cd-tab-filter a {
     text-transform: none!important;
 }
+
 .cd-tab-filter a.selected {
     background: transparent;
     color: #202020;
     box-shadow: inset 0 -5px 0 #FFFFFF;
 }
+
 
 /* 
 -------------------------
@@ -159,17 +210,15 @@ Media queries pour ecrans
 */
 
 @media screen and (min-width: 1024px) {
-    
     /* ---------- 
         GENERAL 
     ------------- */
-    a{
+    a {
         color: @color-secondary!important;
     }
-    a:hover{
+    a:hover {
         color: @color-primary!important;
     }
-    
     /* ---------- 
         SECTION 1 
     ------------- */
@@ -184,13 +233,22 @@ Media queries pour ecrans
         font-weight: 200!important;
     }
     /* ---------- 
+        SECTION 1 
+    ------------- */
+    .about-title {
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    
+    /* ---------- 
         MENU 
     ------------- */
     .menu .logo {
         float: left;
         width: 214px;
         height: 80px;
-
     }
     .top-menu {
         float: left;
@@ -205,17 +263,17 @@ Media queries pour ecrans
     .top-menu ul a:hover {
         color: aquamarine!important;
     }
-    .social-media{
+    .social-media {
         float: right;
         height: 80px;
         margin-right: 150px;
-        line-height:80px;
-        text-align:center;
+        line-height: 80px;
+        text-align: center;
     }
-    .social-media a div{
+    .social-media a div {
         display: inline-block;
-        line-height:80px;
-        text-align:center;
+        line-height: 80px;
+        text-align: center;
     }
     .facebook {
         width: 80px;
@@ -225,7 +283,6 @@ Media queries pour ecrans
         background-size: 40px;
         background-repeat: no-repeat;
     }
-
     .facebook:hover {
         background-image: url("../img/svg/facebook-hover.svg");
     }
@@ -237,18 +294,15 @@ Media queries pour ecrans
         background-size: 40px;
         background-repeat: no-repeat;
     }
-
     .twitter:hover {
         background-image: url("../img/svg/twitter-hover.svg");
     }
     /* ---------- 
     CONTENT-FILTER 
     ------------- */
-    .cd-tab-filter-wrapper{
-    background: @color-tertiary;
-}
-    
-    
+    .cd-tab-filter-wrapper {
+        background: @color-tertiary;
+    }
 }
 
 @media screen and (min-width: 1600px) {
@@ -265,11 +319,13 @@ Media queries pour ecrans
     }
 }
 
+
 /* 
 -------------------------
 Media queries pour autres tailles
 --------------------------
 */
+
 @media screen and (max-width: 320px) {
     .intro img {
         max-width: 150px;

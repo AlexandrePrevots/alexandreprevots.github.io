@@ -1,6 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 /* colors */
 /* fonts */
+.left {
+  float: left;
+  width: 50%;
+}
+.right {
+  float: right;
+  width: 50%;
+}
 /*  
     ------------
     MOBILE FIRST
@@ -21,8 +29,7 @@ ul {
 }
 #section1,
 #section2,
-#section3,
-#section4 {
+#section3 {
   background: #ffffff;
   color: #202020;
   min-height: 100vh;
@@ -102,12 +109,51 @@ ul {
 #section1 h1 {
   text-align: center;
   font-weight: 200;
+  font-size: 4em;
+  color: #f44336;
+}
+#section1 h2 {
+  font-weight: 200;
+  font-size: 3em;
   color: #f44336;
 }
 .about-title {
-  width: 50%;
   text-align: center;
   margin: 0 auto;
+  margin-bottom: 12%!important;
+}
+.about-img div {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  margin-right: 2%;
+}
+.photoshop {
+  background-image: url("../img/svg/photoshop.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.photoshop:hover {
+  background-image: url("../img/svg/photoshop-hover.svg");
+}
+.illustrator {
+  background-image: url("../img/svg/illustrator.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.illustrator:hover {
+  background-image: url("../img/svg/illustrator-hover.svg");
+}
+.indesign {
+  background-image: url("../img/svg/indesign.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.indesign:hover {
+  background-image: url("../img/svg/indesign-hover.svg");
 }
 /*  
     ----------------------
@@ -153,6 +199,14 @@ Media queries pour ecrans
   .intro h1 {
     font-size: 5em;
     font-weight: 200!important;
+  }
+  /* ---------- 
+        SECTION 1 
+    ------------- */
+  .about-title {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
   }
   /* ---------- 
         MENU 
