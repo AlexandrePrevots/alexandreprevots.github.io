@@ -66,6 +66,9 @@ ul {
 .intro h1 {
   font-size: 2em;
 }
+.intro p {
+  font-size: 1.4em;
+}
 /* svg */
 .scroll-section {
   text-align: center;
