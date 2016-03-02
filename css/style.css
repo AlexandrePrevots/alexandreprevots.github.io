@@ -1,0 +1,224 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+/* colors */
+/* fonts */
+/*  
+    ------------
+    MOBILE FIRST
+    ------------
+*/
+/* GENERAL */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+ul {
+  margin-left: 0!important;
+}
+/* SECTIONS */
+#section0 {
+  background-image: url("../img/jpg/bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+#section1,
+#section2,
+#section3,
+#section4 {
+  background: #ffffff;
+  color: #202020;
+  min-height: 100vh;
+}
+/* MENU */
+.menu {
+  background: #202020;
+  height: 80px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  width: 100%;
+}
+.menu ul a li {
+  display: inline;
+  color: #ffffff !important;
+  padding: 15px;
+}
+.menu .logo {
+  float: left;
+  width: 214px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+}
+.menu .logo img {
+  vertical-align: middle;
+  max-height: 50px;
+}
+/*  
+    ------------
+    1ere section
+    ------------
+*/
+#section0 {
+  color: #fff;
+  min-height: 100vh;
+}
+.intro {
+  text-align: center;
+}
+.intro h1 {
+  font-size: 2em;
+}
+/* svg */
+.scroll-section {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.scroll-section img {
+  width: 50%;
+}
+.bloc-white {
+  background: #fff;
+  opacity: 0.9;
+  width: 45%;
+  border-radius: 6px 6px 6px;
+  display: block;
+  padding: 2px;
+  margin: 0 auto;
+  color: #202020;
+}
+.bloc-white:hover {
+  background: #202020;
+  color: #ffffff;
+  transition: ease-out 0.2s;
+}
+/*  
+    ---------------------------------------
+    2eme section : Formations + Expériences
+    ---------------------------------------
+*/
+#section1 h1 {
+  text-align: center;
+  font-weight: 200;
+  color: #f44336;
+}
+.about-title {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+/*  
+    ----------------------
+    3eme section : Galerie
+    ----------------------
+*/
+/*Content-filter*/
+.cd-tab-filter-wrapper {
+  background: transparent;
+}
+.cd-tab-filter a {
+  text-transform: none!important;
+}
+.cd-tab-filter a.selected {
+  background: transparent;
+  color: #202020;
+  box-shadow: inset 0 -5px 0 #ffffff;
+}
+/* Media queries pour ecrans */
+@media screen and (min-width: 1024px) {
+  /* ---------- 
+        GENERAL 
+    ------------- */
+  a {
+    color: #ffffff !important;
+  }
+  a:hover {
+    color: #202020 !important;
+  }
+  /* ---------- 
+        SECTION 1 
+    ------------- */
+  .scroll-section img {
+    width: 15%;
+  }
+  .bloc-white {
+    width: 12%;
+  }
+  .intro h1 {
+    font-size: 5em;
+    font-weight: 200!important;
+  }
+  /* ---------- 
+        MENU 
+    ------------- */
+  .menu .logo {
+    float: left;
+    width: 214px;
+    height: 80px;
+  }
+  .top-menu {
+    float: left;
+    height: 80px;
+  }
+  .top-menu ul a li {
+    line-height: 80px;
+  }
+  .top-menu ul a li:hover {
+    border-bottom: solid #fff 2px;
+  }
+  .top-menu ul a:hover {
+    color: aquamarine!important;
+  }
+  .social-media {
+    float: right;
+    height: 80px;
+    margin-right: 150px;
+    line-height: 80px;
+    text-align: center;
+  }
+  .social-media a div {
+    display: inline-block;
+    line-height: 80px;
+    text-align: center;
+  }
+  .facebook {
+    width: 80px;
+    height: 80px;
+    background-image: url("../img/svg/facebook.svg");
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+  }
+  .facebook:hover {
+    background-image: url("../img/svg/facebook-hover.svg");
+  }
+  .twitter {
+    width: 80px;
+    height: 80px;
+    background-image: url("../img/svg/twitter.svg");
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+  }
+  .twitter:hover {
+    background-image: url("../img/svg/twitter-hover.svg");
+  }
+  /* ---------- 
+    CONTENT-FILTER 
+    ------------- */
+  .cd-tab-filter-wrapper {
+    background: #f44336;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .intro {
+    font-size: 2em;
+    margin-bottom: 10%;
+  }
+  .scroll-section img {
+    width: 20%;
+  }
+  .bloc-white {
+    width: 16%;
+    font-size: 1.6em;
+  }
+}
