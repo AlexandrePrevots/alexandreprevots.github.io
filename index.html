@@ -25,6 +25,8 @@
 
     <link rel="stylesheet" href="css/animate.css">
 
+    <link rel="stylesheet" href="css/gallery/hover-gallery.css">
+
     <!--[if IE]>
         <script type="text/javascript">
              var console = { log: function() {} };
@@ -42,8 +44,8 @@
         <div class="section" id="section0">
             <div class="intro wow fadeIn">
                 <img src="img/png/logo-prevots.png" alt="logo Alexandre Prevots">
-                <h1>I'm Alexandre.</h1>
-                <p>a web designer.</p>
+                <h1>I'm Alexandre</h1>
+                <p>a web designer</p>
             </div>
             <div class="scroll-section">
                 <a href="#section1">
@@ -111,14 +113,14 @@
             <section class="about-title large-12 small-12 ">
                 <h1 class="wow pulse">Hi</h1>
                 <p>I'm a web designer based in Rouen, France.
-                    <br> I have a passion for web design and new technologies.</p>
+                    <br> I have a passion for web design and new technologies</p>
             </section>
 
             <section class="large-12 columns">
                 <div class="large-6 columns wow slideInLeft">
                     <h2>design what you want</h2>
                     <p>I'm full of imagination!
-                        <br> I love create with the design softwares.
+                        <br> I love create with the design softwares
                     </p>
                 </div>
                 <div class="large-6 columns about-img wow slideInRight">
@@ -145,7 +147,7 @@
                 </div>
                 <div class="large-6 columns  wow slideInRight about-screen">
                     <h2>develop what you need</h2>
-                    <p>J'aime développer des sites web, que ce soit sur mobile ou écrans. J'aime réfléchir sur la conception d'un site web mais aussi sur l'expérience utilisateur pour réaliser des sites mémorables</p>
+                    <p>developping websites is one of my passions. I love think about user experience and user interface to make great websites</p>
                 </div>
 
                 <!-- 
@@ -155,7 +157,7 @@
                !-->
                 <div class="large-6 columns  wow slideInLeft about-smartphone">
                     <h2>develop what you need</h2>
-                    <p>J'aime développer des sites web, que ce soit sur mobile ou écrans. J'aime réfléchir sur la conception d'un site web mais aussi sur l'expérience utilisateur pour réaliser des sites mémorables</p>
+                    <p>Developping websites is one of my passions. I love think about user experience and user interface to make great websites</p>
                 </div>
                 <div class="large-6 columns wow about-img slideInRight about-smartphone">
                     <div class="github"></div>
@@ -164,13 +166,13 @@
                     <div class="js"></div>
                     <div class="php"></div>
                 </div>
-                
+
             </section>
 
             <section class="large-12 columns">
                 <div class="large-6 columns wow slideInLeft">
                     <h2>animate and editing what you want</h2>
-                    <p>Adobe Premiere / Adobe After Effects / Audition </p>
+                    <p>I love spend time to animate and edit audio and videos</p>
                 </div>
                 <div class="large-6 columns about-img wow slideInRight">
                     <div class="after"></div>
@@ -195,6 +197,7 @@
         </div>
 
         <div class="section" id="section2">
+
             <h1>Works</h1>
 
             <!-- 
@@ -223,14 +226,37 @@
 
                 <section class="cd-gallery">
                     <ul>
-                        <li class="mix color-1">
-                            <a href="#"><img src="img/img-1.jpg" alt="Image 1"></a>
+                        <li class="mix color-1 image-wrapper overlay-fade-in">
+                            <a href="http://mmirouen.fr/sitedzingstudio/index.php" target="_blank" data-open="web1">
+                               <img src="img/jpg/gallery/mmi-website.jpg" alt="Website DUT MMI">
+                                <div class="image-overlay-content">
+                                    <h2>School website</h2>
+                                    <p class="price">DUT MMI</p>
+                                    <a href="http://mmirouen.fr/sitedzingstudio/index.php" class="button" target="_blank">See more</a>
+                                </div>
+                            </a>
                         </li>
-                        <li class="mix color-2">
-                            <a href="#"><img src="img/img-2.jpg" alt="Image 2"></a>
+                        <li class="mix color-1 image-wrapper overlay-fade-in">
+                            <a href="http://comitejumelage-elbeuf.eu/" target="_blank" data-open="web2">
+                                <img src="img/jpg/gallery/comite-website.jpg" alt="Comité de jumelage Elbeuf website" >
+                                <div class="image-overlay-content">
+                                    <h2>Twinning Committee Elbeuf website</h2>
+                                    <p class="price">Traineeship</p>
+                                    <a href="http://comitejumelage-elbeuf.eu/" class="button" target="_blank">See more</a>
+                                </div>
+                            </a>
                         </li>
-                        <li class="mix color-1"><img src="img/img-3.jpg" alt="Image 3"></li>
-                        <li class="mix color-1 check3 radio2 option4">
+                        <li class="mix color-3 image-wrapper overlay-fade-in">
+                            <a href="#0" data-open="audio1">
+                                <img src="img/jpg/gallery/youtube-matmut.jpg" alt="Spot radio matmut">
+                                <div class="image-overlay-content">
+                                    <h2>Spot radio Matmut</h2>
+                                    <p class="price">Animation</p>
+                                    <a href="#0" class="button" data-open="audio1">See more</a>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mix color-3 check3 radio2 option4">
                             <a href="#"><img src="img/img-4.jpg" alt="Image 4"></a>
                         </li>
                         <li class="mix color-1 check1 radio3 option2">
@@ -271,11 +297,26 @@
                     End Content filter 
                 ********************************
             -->
+
+
+            <!-- 
+               ******************************
+                    REVEAL MODAL
+                ********************************
+            -->
+
+            <div class="reveal" id="audio1" data-reveal>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZGpp_2ydSb4?list=PLF970A1CDFDCBEEDB" frameborder="0" allowfullscreen></iframe>
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
         </div>
 
         <div class="section" id="section3">
             <div class="">
                 <h1>Contact</h1>
+
                 <p class="wow FadeInLeft">Contactez moi</p>
             </div>
         </div>
