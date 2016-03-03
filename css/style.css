@@ -1,13 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 /* colors */
 /* fonts */
-.left {
-  float: left;
-  width: 50%;
-}
-.right {
-  float: right;
-  width: 50%;
+.hide {
+  visibility: hidden;
 }
 /*  
     ------------
@@ -58,6 +53,40 @@ ul {
   vertical-align: middle;
   max-height: 50px;
 }
+/* MENU SMARTPHONE */
+.top-menu {
+  display: none;
+}
+ul.dropdown-menu li a {
+  color: #ffffff;
+}
+#primary_nav_wrap {
+  display: block;
+}
+#primary_nav_wrap ul li a img {
+  max-width: 50px;
+}
+#primary_nav_wrap ul li {
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+#primary_nav_wrap ul ul {
+  display: none;
+  position: absolute;
+  top: 142%;
+  left: 0;
+  background: #202020;
+  padding: 0;
+}
+#primary_nav_wrap ul ul ul {
+  top: 0;
+  left: 100%;
+}
+#primary_nav_wrap ul li:hover > ul {
+  display: block;
+}
 /*  
     ------------
     1ere section
@@ -88,18 +117,17 @@ ul {
 }
 .bloc-white {
   background: #fff;
-  opacity: 0.9;
-  width: 45%;
-  border-radius: 6px 6px 6px;
+  width: 60%;
   display: block;
-  padding: 2px;
+  padding: 20px;
   margin: 0 auto;
   color: #202020;
+  text-transform: uppercase;
 }
 .bloc-white:hover {
-  background: #202020;
+  background: #f44336;
   color: #ffffff;
-  transition: ease-out 0.2s;
+  transition: ease-in 0.2s;
 }
 /*  
     ---------------------------------------
@@ -120,9 +148,18 @@ ul {
 #section1 section {
   margin-bottom: 12%!important;
 }
+.about-screen {
+  display: none;
+}
+.about-smartphone {
+  display: block;
+}
 .about-title {
   text-align: center;
   margin: 0 auto;
+}
+.about-img {
+  text-align: center;
 }
 .about-img div {
   width: 80px;
@@ -157,6 +194,115 @@ ul {
 .indesign:hover {
   background-image: url("../img/svg/indesign-hover.svg");
 }
+.github {
+  background-image: url("../img/svg/github.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.github:hover {
+  background-image: url("../img/svg/github-hover.svg");
+}
+.html {
+  background-image: url("../img/svg/html.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.html:hover {
+  background-image: url("../img/svg/html-hover.svg");
+}
+.css {
+  background-image: url("../img/svg/css.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.css:hover {
+  background-image: url("../img/svg/css-hover.svg");
+}
+.js {
+  background-image: url("../img/svg/js.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.js:hover {
+  background-image: url("../img/svg/js-hover.svg");
+}
+.php {
+  background-image: url("../img/svg/php.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.php:hover {
+  background-image: url("../img/svg/php-hover.svg");
+}
+.after {
+  background-image: url("../img/svg/after.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.after:hover {
+  background-image: url("../img/svg/after-hover.svg");
+}
+.audition {
+  background-image: url("../img/svg/audition.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.audition:hover {
+  background-image: url("../img/svg/audition-hover.svg");
+}
+.premiere {
+  background-image: url("../img/svg/premiere.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.premiere:hover {
+  background-image: url("../img/svg/premiere-hover.svg");
+}
+.sketchup {
+  background-image: url("../img/svg/sketchup.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.sketchup:hover {
+  background-image: url("../img/svg/sketchup-hover.svg");
+}
+.work-with h2 {
+  text-align: center;
+}
+.job-img {
+  text-align: center;
+  margin-top: 5%;
+}
+.job-img div {
+  width: 180px;
+  height: 180px;
+  display: inline-block;
+  margin-right: 2%;
+}
+.matmut {
+  background-image: url("../img/svg/matmut.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.matmut:hover {
+  background-image: url("../img/svg/matmut-hover.svg");
+}
+.comite-elbeuf {
+  background-image: url("../img/jpg/comite-jumelage.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
 /*  
     ----------------------
     3eme section : Galerie
@@ -188,27 +334,6 @@ Media queries pour ecrans
   }
   a:hover {
     color: #202020 !important;
-  }
-  /* ---------- 
-        SECTION 1 
-    ------------- */
-  .scroll-section img {
-    width: 15%;
-  }
-  .bloc-white {
-    width: 12%;
-  }
-  .intro h1 {
-    font-size: 5em;
-    font-weight: 200!important;
-  }
-  /* ---------- 
-        SECTION 1 
-    ------------- */
-  .about-title {
-    width: 50%;
-    text-align: center;
-    margin: 0 auto;
   }
   /* ---------- 
         MENU 
@@ -243,6 +368,17 @@ Media queries pour ecrans
     line-height: 80px;
     text-align: center;
   }
+  .linkedin {
+    width: 80px;
+    height: 80px;
+    background-image: url("../img/svg/linkedin.svg");
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+  }
+  .linkedin:hover {
+    background-image: url("../img/svg/linkedin-hover.svg");
+  }
   .facebook {
     width: 80px;
     height: 80px;
@@ -265,6 +401,39 @@ Media queries pour ecrans
   .twitter:hover {
     background-image: url("../img/svg/twitter-hover.svg");
   }
+  #primary_nav_wrap {
+    display: none;
+  }
+  .top-menu {
+    display: block;
+  }
+  /* ---------- 
+        SECTION 1 
+    ------------- */
+  .scroll-section img {
+    width: 15%;
+  }
+  .bloc-white {
+    width: 20%;
+  }
+  .intro h1 {
+    font-size: 5em;
+    font-weight: 200!important;
+  }
+  /* ---------- 
+        SECTION 2 
+    ------------- */
+  .about-title {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .about-screen {
+    display: block;
+  }
+  .about-smartphone {
+    display: none;
+  }
   /* ---------- 
     CONTENT-FILTER 
     ------------- */
@@ -281,7 +450,7 @@ Media queries pour ecrans
     width: 20%;
   }
   .bloc-white {
-    width: 16%;
+    width: 20%;
     font-size: 1.6em;
   }
 }

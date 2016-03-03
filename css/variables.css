@@ -1,11 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 /* colors */
 /* fonts */
-.left {
-  float: left;
-  width: 50%;
-}
-.right {
-  float: right;
-  width: 50%;
+.hide {
+  visibility: hidden;
 }
