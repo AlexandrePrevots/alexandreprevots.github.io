@@ -111,7 +111,7 @@ ul.dropdown-menu li a {
 
 /*  
     ------------
-    1ere section
+        HOME
     ------------
 */
 
@@ -166,7 +166,7 @@ ul.dropdown-menu li a {
 
 /*  
     ---------------------------------------
-    2eme section : Formations + Expériences
+    1ere section : Formations + Expériences
     ---------------------------------------
 */
 
@@ -380,11 +380,14 @@ ul.dropdown-menu li a {
 
 /*  
     ----------------------
-    3eme section : Galerie
+    2eme section : Galerie
     ----------------------
 */
 
 
+#section2 h2 {
+    font-size: 1.8em!important;
+}
 /*Content-filter*/
 
 .cd-tab-filter-wrapper {
@@ -401,6 +404,22 @@ ul.dropdown-menu li a {
     box-shadow: inset 0 -5px 0 #FFFFFF;
 }
 
+.overlay-fade-in .button{
+    background: @color-tertiary!important;
+    box-shadow: none!important;
+    border: none!important;
+    padding: 12px 35px!important;
+    color: @color-secondary!important;
+        transition: all 0.2s ease-out;
+}
+.overlay-fade-in .button:hover{
+    background: @color-primary!important;
+        transition: all 0.2s ease-out;
+}
+.overlay-fade-in p {
+    font-size: 1.2em;
+        letter-spacing: 0.05em!important;
+}
 
 /* 
 -------------------------
@@ -518,9 +537,11 @@ Media queries pour ecrans
         SECTION 2 
     ------------- */
     .about-title {
-        width: 50%;
         text-align: center;
         margin: 0 auto;
+    }
+    .about-title .avatar img{
+        width: 80%;
     }
     .about-screen {
         display: block;
