@@ -27,8 +27,7 @@ hr {
   background-size: cover;
 }
 #section1,
-#section2,
-#section3 {
+#section2 {
   background: #ffffff;
   color: #202020;
   min-height: 100vh;
@@ -130,7 +129,6 @@ ul.dropdown-menu li a {
   font-size: 0.9em;
 }
 .bloc-white:hover {
-  background: #202020;
   color: #ffffff;
   transition: ease-in 0.2s;
 }
@@ -162,6 +160,10 @@ ul.dropdown-menu li a {
 .about-title {
   text-align: center;
   margin: 0 auto;
+}
+.text-intro h1,
+.text-intro p {
+  text-align: left!important;
 }
 .about-img {
   text-align: center;
@@ -290,7 +292,7 @@ ul.dropdown-menu li a {
 .job-img {
   text-align: center;
   margin-top: 1%;
-  background: #eee;
+  background: #f1f1f1;
   padding-top: 3%;
   padding-bottom: 3%;
 }
@@ -354,17 +356,8 @@ ul.dropdown-menu li a {
     ----------------------
 */
 #section3 {
-  background-image: url("../img/jpg/bg.jpg");
-  background-position: center;
-  background-size: cover;
-}
-.contact-button {
-  background: #f49719;
-  width: 20%;
-  text-align: center;
-  float: none!important;
-  margin: 0 auto;
-  display: block;
+  background-color: #202020;
+  color: #fff;
 }
 .contact-button img {
   width: 32px;
@@ -372,6 +365,32 @@ ul.dropdown-menu li a {
 }
 .contact-button a {
   color: #fff;
+}
+.habillage-contact {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 35px;
+}
+.habillage-hr,
+.habillage-contact-p {
+  display: inline-block;
+  margin: 0!important;
+  width: 100px;
+}
+.habillage-contact-p {
+  text-align: center;
+}
+.footer {
+  padding-top: 5%;
+}
+.mentions {
+  text-align: center;
+}
+.socialmedia-footer {
+  text-align: center;
+}
+.socialmedia-footer a div {
+  display: inline-block;
 }
 /* 
 -------------------------
@@ -461,12 +480,12 @@ Media queries pour ecrans
     display: block;
   }
   .bloc-white {
-    background: #fff;
+    background: #f49719;
     width: 60%;
     display: block;
     padding: 15px;
     margin: 0 auto;
-    color: #202020;
+    color: #ffffff;
     text-transform: uppercase;
     font-size: 1em;
   }
@@ -504,6 +523,23 @@ Media queries pour ecrans
     ------------- */
   .cd-tab-filter-wrapper {
     background: #f49719;
+  }
+  /* ---------- 
+    FOOTER
+    ------------- */
+  .contact-button {
+    background: #f49719;
+    width: 20%;
+    text-align: center;
+    float: none!important;
+    margin: 0 auto;
+    display: block;
+  }
+  .socialmedia-footer {
+    text-align: center;
+  }
+  .socialmedia-footer a div {
+    display: inline-block;
   }
 }
 @media screen and (min-width: 1600px) {
