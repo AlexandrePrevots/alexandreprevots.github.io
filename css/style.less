@@ -16,10 +16,12 @@ body {
 ul {
     margin-left: 0!important;
 }
-hr{
+
+hr {
     margin-bottom: 7%;
     width: 70%;
 }
+
 
 /* SECTIONS */
 
@@ -30,8 +32,7 @@ hr{
 }
 
 #section1,
-#section2,
-#section3 {
+#section2 {
     background: @color-secondary;
     color: @color-primary;
     min-height: 100vh;
@@ -161,7 +162,6 @@ ul.dropdown-menu li a {
 }
 
 .bloc-white:hover {
-    background: @color-primary;
     color: @color-secondary;
     transition: ease-in 0.2s;
 }
@@ -201,6 +201,11 @@ ul.dropdown-menu li a {
 .about-title {
     text-align: center;
     margin: 0 auto;
+}
+
+.text-intro h1,
+.text-intro p {
+    text-align: left!important;
 }
 
 .about-img {
@@ -346,10 +351,11 @@ ul.dropdown-menu li a {
     background-image: url("../img/svg/sketchup-hover.svg");
 }
 
-.work-with{
-    padding-left: 0!important; 
+.work-with {
+    padding-left: 0!important;
     padding-right: 0!important;
 }
+
 .work-with h2 {
     text-align: center;
 }
@@ -357,8 +363,7 @@ ul.dropdown-menu li a {
 .job-img {
     text-align: center;
     margin-top: 1%;
-    background: #eee;
-
+    background: #f1f1f1;
     padding-top: 3%;
     padding-bottom: 3%;
 }
@@ -391,10 +396,11 @@ ul.dropdown-menu li a {
     ----------------------
 */
 
-
 #section2 h2 {
     font-size: 1.8em!important;
 }
+
+
 /*Content-filter*/
 
 .cd-tab-filter-wrapper {
@@ -411,21 +417,23 @@ ul.dropdown-menu li a {
     box-shadow: inset 0 -5px 0 #FFFFFF;
 }
 
-.overlay-fade-in .button{
+.overlay-fade-in .button {
     background: @color-tertiary!important;
     box-shadow: none!important;
     border: none!important;
     padding: 12px 35px!important;
     color: @color-secondary!important;
-        transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
-.overlay-fade-in .button:hover{
+
+.overlay-fade-in .button:hover {
     background: @color-primary!important;
-        transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
+
 .overlay-fade-in p {
     font-size: 1.2em;
-        letter-spacing: 0.05em!important;
+    letter-spacing: 0.05em!important;
 }
 
 
@@ -435,29 +443,50 @@ ul.dropdown-menu li a {
     ----------------------
 */
 
-#section3{
-    background-image: url("../img/jpg/bg.jpg");
-    background-position: center;
-    background-size: cover;
+#section3 {
+    background-color: @color-primary;
+    color: #fff;
 }
 
-.contact-button{
-   background: #f49719;
-   width: 20%;
-   text-align: center;
-    float: none!important;
+.contact-button img {
+    width: 32px;
+    margin-right: 15px;
+}
+
+.contact-button a {
+    color: #fff;
+}
+
+.habillage-contact {
     margin: 0 auto;
-    display: block;
+    text-align: center;
+    margin-top: 35px;
 }
 
-.contact-button img{
-   width: 32px;
-   margin-right: 15px;
-}
-.contact-button a{
-       color: #fff;
+.habillage-hr,
+.habillage-contact-p {
+    display: inline-block;
+    margin: 0!important;
+    width: 100px;
 }
 
+.habillage-contact-p {
+    text-align: center;
+}
+
+.footer {
+    padding-top: 5%;
+}
+
+.mentions {
+    text-align: center;
+}
+    .socialmedia-footer {
+        text-align: center;
+    }
+    .socialmedia-footer a div {
+        display: inline-block;
+    }
 
 /* 
 -------------------------
@@ -547,16 +576,15 @@ Media queries pour ecrans
     .top-menu {
         display: block;
     }
-    
     .bloc-white {
-    background: #fff;
-    width: 60%;
-    display: block;
-    padding: 15px;
-    margin: 0 auto;
-    color: @color-primary;
-    text-transform: uppercase;
-    font-size: 1em;
+        background: @color-tertiary;
+        width: 60%;
+        display: block;
+        padding: 15px;
+        margin: 0 auto;
+        color: @color-secondary;
+        text-transform: uppercase;
+        font-size: 1em;
     }
     /* ---------- 
         SECTION 1 
@@ -578,7 +606,7 @@ Media queries pour ecrans
         text-align: center;
         margin: 0 auto;
     }
-    .about-title .avatar img{
+    .about-title .avatar img {
         width: 80%;
     }
     .about-screen {
@@ -592,6 +620,23 @@ Media queries pour ecrans
     ------------- */
     .cd-tab-filter-wrapper {
         background: @color-tertiary;
+    }
+    /* ---------- 
+    FOOTER
+    ------------- */
+    .contact-button {
+        background: #f49719;
+        width: 20%;
+        text-align: center;
+        float: none!important;
+        margin: 0 auto;
+        display: block;
+    }
+    .socialmedia-footer {
+        text-align: center;
+    }
+    .socialmedia-footer a div {
+        display: inline-block;
     }
 }
 
