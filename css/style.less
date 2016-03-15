@@ -21,6 +21,9 @@ hr {
     margin-bottom: 7%;
     width: 70%;
 }
+.has-tip{
+    border-bottom: none!important;
+}
 
 
 /* SECTIONS */
@@ -389,6 +392,9 @@ ul.dropdown-menu li a {
     background-size: contain;
 }
 
+.separation-works{
+    padding-top: 10%;
+}
 
 /*  
     ----------------------
@@ -396,8 +402,13 @@ ul.dropdown-menu li a {
     ----------------------
 */
 
+#section2 h1 {
+    text-align: center;
+    color: @color-tertiary;
+}
 #section2 h2 {
-    font-size: 1.8em!important;
+    font-size: 1.7em!important;
+    padding: 1%;
 }
 
 
@@ -435,7 +446,19 @@ ul.dropdown-menu li a {
     font-size: 1.2em;
     letter-spacing: 0.05em!important;
 }
+.lien-gallery{
+    color: @color-tertiary!important;
+}
 
+.wireframe-matmut{
+   overflow: auto!important;
+    text-align: center;
+}
+.wireframe-matmut img{
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+}
 
 /*  
     ----------------------
@@ -457,22 +480,7 @@ ul.dropdown-menu li a {
     color: #fff;
 }
 
-.habillage-contact {
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 35px;
-}
 
-.habillage-hr,
-.habillage-contact-p {
-    display: inline-block;
-    margin: 0!important;
-    width: 100px;
-}
-
-.habillage-contact-p {
-    text-align: center;
-}
 
 .footer {
     padding-top: 5%;
@@ -481,12 +489,46 @@ ul.dropdown-menu li a {
 .mentions {
     text-align: center;
 }
-    .socialmedia-footer {
-        text-align: center;
-    }
-    .socialmedia-footer a div {
-        display: inline-block;
-    }
+
+.socialmedia-footer {
+    text-align: center;
+}
+
+.socialmedia-footer a div {
+    display: inline-block;
+}
+
+.habillage-contact{
+    display: none;
+}
+
+.facebook-mobile {
+    width: 80px;
+    height: 80px;
+    background-image: url("../img/svg/facebook.svg");
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+}
+
+.twitter-mobile {
+    width: 80px;
+    height: 80px;
+    background-image: url("../img/svg/twitter.svg");
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+}
+
+.linkedin-mobile {
+    width: 80px;
+    height: 80px;
+    background-image: url("../img/svg/linkedin.svg");
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+}
+
 
 /* 
 -------------------------
@@ -577,7 +619,7 @@ Media queries pour ecrans
         display: block;
     }
     .bloc-white {
-        background: @color-tertiary;
+        background: @color-primary;
         width: 60%;
         display: block;
         padding: 15px;
@@ -638,6 +680,22 @@ Media queries pour ecrans
     .socialmedia-footer a div {
         display: inline-block;
     }
+    .habillage-contact {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.habillage-hr,
+.habillage-contact-p {
+    display: inline-block;
+    margin: 0!important;
+    width: 100px;
+}
+
+.habillage-contact-p {
+    text-align: center;
+}
 }
 
 @media screen and (min-width: 1600px) {
