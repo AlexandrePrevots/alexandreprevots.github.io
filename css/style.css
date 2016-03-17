@@ -12,10 +12,6 @@
 /* GENERAL */
 body {
   font-family: 'Roboto', sans-serif;
-  background-image: url("../img/jpg/bg.jpg");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
 }
 ul {
   margin-left: 0!important;
@@ -28,6 +24,11 @@ hr {
   border-bottom: none!important;
 }
 /* SECTIONS */
+#section0 {
+  background-image: url("../img/jpg/bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
 #section1,
 #section2 {
   background: #ffffff;
@@ -48,8 +49,9 @@ hr {
   padding: 15px;
 }
 .menu .logo {
-  float: left;
+  /*float: left;*/
   width: 214px;
+  margin: 0 auto;
   height: 80px;
   line-height: 80px;
   text-align: center;
@@ -66,6 +68,9 @@ hr {
   display: block;
 }
 #menu-mobile {
+  display: none;
+}
+#primary_nav_wrap {
   display: none;
 }
 /*  
@@ -366,6 +371,9 @@ hr {
 }
 .footer {
   padding-top: 5%;
+  background-image: url("../img/jpg/bg.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .mentions {
   text-align: center;
@@ -412,6 +420,12 @@ Media queries pour ecrans
   /* ---------- 
         GENERAL 
     ------------- */
+  body {
+    background-image: url("../img/jpg/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
   a {
     color: #ffffff !important;
   }
@@ -503,6 +517,12 @@ Media queries pour ecrans
   /* ---------- 
         SECTION 1 
     ------------- */
+  #section0 {
+    background: none!important;
+  }
+  footer {
+    background: none!important;
+  }
   .scroll-section img {
     width: 15%;
   }
