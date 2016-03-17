@@ -11,10 +11,6 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-image: url("../img/jpg/bg.jpg");
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
 }
 
 ul {
@@ -33,7 +29,9 @@ hr {
 /* SECTIONS */
 
 #section0 {
-
+    background-image: url("../img/jpg/bg.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 #section1,
@@ -61,8 +59,9 @@ hr {
 }
 
 .menu .logo {
-    float: left;
+    /*float: left;*/
     width: 214px;
+    margin: 0 auto;
     height: 80px;
     line-height: 80px;
     text-align: center;
@@ -86,7 +85,9 @@ hr {
 #menu-mobile{
     display: none;
 }
-
+    #primary_nav_wrap {
+        display: none;
+    }
 /*  
     ------------
         HOME
@@ -455,6 +456,9 @@ hr {
 
 .footer {
     padding-top: 5%;
+    background-image: url("../img/jpg/bg.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 .mentions {
@@ -511,6 +515,12 @@ Media queries pour ecrans
     /* ---------- 
         GENERAL 
     ------------- */
+    body{
+    background-image: url("../img/jpg/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    }
     a {
         color: @color-secondary!important;
     }
@@ -602,6 +612,12 @@ Media queries pour ecrans
     /* ---------- 
         SECTION 1 
     ------------- */
+    #section0{
+        background: none!important;
+    }
+    footer{
+        background: none!important;
+    }
     .scroll-section img {
         width: 15%;
     }
