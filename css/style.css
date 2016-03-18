@@ -566,6 +566,9 @@ Media queries pour ecrans
     margin: 0 auto;
     display: block;
   }
+  .contact-button:hover {
+    color: #fff!important;
+  }
   .socialmedia-footer {
     text-align: center;
   }
