@@ -1,474 +1,433 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 
 <head>
-    <!-- meta -->
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Alexandre Prevots" />
-    <meta name="description" content="Portfolio Alexandre Prevots Webdesigner." />
-    <meta name="keywords" content="fullpage,jquery,portfolio,screen,fullscreen, scroll, design, webdesign" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Portfolio de alexandre Prevots">
+    <meta name="author" content="alexandre prevots">
+    <link rel="icon" href="favicon.ico">
 
-    <title>Alexandre Prevots | Portfolio</title>
+    <title>Portfolio | Alexandre Prevots</title>
 
-       
-    <link rel="icon" type="image/ico" href="img/favicon.ico" />
-    <!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" /><![endif]-->
+    <!-- 
+************************
+        CSS 
+************************ 
+-->
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- css -->
-    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Style global -->
+    <link href="custom.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/contentFilter/content-filter.css">
-    <!-- Resource style -->
+    <!-- 
+************************
+        PLUGINS 
+************************ 
+-->
 
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/app.css" />
+    <!-- ScrollReveal -->
+    <script src="assets/js/reveal/scrollreveal.js"></script>
+    <script>
+        window.sr = ScrollReveal();
 
-    <link rel="stylesheet" href="css/style.css" />
+        // Add class to <html> if ScrollReveal is supported
+        if (sr.isSupported()) {
+            document.documentElement.classList.add('sr');
+        }
+    </script>
 
-    <link rel="stylesheet" href="css/animate.css">
+    <style>
+        /* Ensure elements load hidden before ScrollReveal runs */
+        
+        .sr .fooReveal {
+            visibility: hidden;
+        }
+        /* add perspective to your container */
+        
+        .fooContainer {
+            perspective: 800px;
+        }
+    </style>
 
-    <link rel="stylesheet" href="css/gallery/hover-gallery.css">
+    <!-- Masonry -->
+    <script src="assets/js/masonry/masonry.pkgd.js"></script>
 
-    <!--[if IE]>
-        <script type="text/javascript">
-             var console = { log: function() {} };
-        </script>
+    <!-- Smooth Scroll -->
+    <script src="assets/js/smooth_scroll/smooth-scroll.js"></script>
+
+    <!-- 
+************************
+        DEBUG 
+************************ 
+-->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
-
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-
 
 </head>
 
 <body>
 
-    <div id="fullpage">
-        <div class="section" id="section0">
-            <div class="intro wow fadeIn">
-                <img src="img/png/logo-prevots.png" alt="logo Alexandre Prevots">
-                <h1>Alexandre Prevots</h1>
-                <p>web designer</p>
+    <div class="site-wrapper">
+
+        <div class="site-wrapper-inner">
+
+            <div class="cover-container">
+
+
+
+                <!-- scrolling up -->
+
+
+                <div id="header" class="masthead clearfix">
+                    <div class="inner">
+                        <a href="#" id="main-logo" alt="Lien home page" class="masthead-brand hvr-pulse"><img src="img/logo_prevots-b.png" alt="Logo Alexandre Prevots"></a>
+                        <nav>
+                            <ul class="nav masthead-nav">
+                                <li class="hvr-underline-reveal"><a data-scroll href="#">Home</a></li>
+                                <li class="hvr-underline-reveal"><a data-scroll href="#section_about">À propos</a></li>
+                                <li class="hvr-underline-reveal"><a data-scroll href="#section_featured">Réalisations</a></li>
+                                <li class="hvr-underline-reveal"><a data-scroll href="#section_contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="container_presentation">
+                    <div class="presentation">
+                        <div class="presentation_text">
+                            <h1 class="cover_heading reveal_basic">Alexandre Prevots</h1>
+                            <p class="lead reveal_basic2">UX / UI DESIGNER.</p>
+                            <a data-scroll href="#section_about" class="scroll_icon hvr-sink">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" style="enable-background:new 0 0 100 100;" xml:space="preserve" fill="#fff">
+                                    <path d="M56.6,79.6L50,86.2l-6.6-6.6c-0.8-0.8-2-0.8-2.8,0s-0.8,2,0,2.8l8,8C49,90.8,49.5,91,50,91s1-0.2,1.4-0.6l8-8  c0.8-0.8,0.8-2,0-2.8S57.4,78.8,56.6,79.6z" />
+                                    <path d="M59.4,68.6c-0.8-0.8-2-0.8-2.8,0L50,75.2l-6.6-6.6c-0.8-0.8-2-0.8-2.8,0s-0.8,2,0,2.8l8,8C49,79.8,49.5,80,50,80  s1-0.2,1.4-0.6l8-8C60.2,70.6,60.2,69.4,59.4,68.6z" />
+                                    <path d="M68,45V27c0-9.9-8.1-18-18-18s-18,8.1-18,18v18c0,9.9,8.1,18,18,18S68,54.9,68,45z M50,59c-7.7,0-14-6.3-14-14V27  c0-7.7,6.3-14,14-14s14,6.3,14,14v18C64,52.7,57.7,59,50,59z" />
+                                    <path d="M50,20c-1.1,0-2,0.9-2,2v6c0,1.1,0.9,2,2,2c1.1,0,2-0.9,2-2v-6C52,20.9,51.1,20,50,20z" />
+                                </svg>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="cd-background-wrapper">
+                        <figure class="cd-floating-background">
+                            <img src="img/photos/made_by_prevots_alexandre.jpg" alt="image-1">
+                            <img src="img/photos/detoure-made_by_prevots_alexandre.png" alt="image-2">
+                            <!--<img src="img/cd-img-3.png" alt="image-3">-->
+                        </figure>
+                    </div>
+                </div>
+
+
             </div>
-            <div class="scroll-section">
-                <a href="#section1">
-                    <div class="bloc-white button">Continuer</div>
-                </a>
-                <img src="img/png/triangles-scroll.png" alt="scroll_down">
-            </div>
-        </div>
-        <div class="section" id="section1">
-
-            <!-- NAVIGATION -->
-            <nav class="menu">
-                <div class="logo"><img src="img/png/logo-prevots.png" alt="logo Alexandre Prevots"></div>
-
-                <div class="top-menu">
-                    <ul>
-                        <a href="#section0">
-                            <li>Accueil</li>
-                        </a>
-                        <a href="#section1">
-                            <li>A propos</li>
-                        </a>
-                        <a href="#works-anchor">
-                            <li>Galerie</li>
-                        </a>
-                        <a href="#section3">
-                            <li>Contact</li>
-                        </a>
-                    </ul>
-                </div>
-
-                <!-- 
-                ****************
-                MENU SMARTPHONE
-                **************** 
-                -->
-                <div id="primary_nav_wrap">
-
-                            <a href="#0"><img src="img/png/triangle-menu.png" alt="icone-menu"></a>
-
-                </div>
-                <div id="menu-mobile" class="small-12 columns">
-                    <ul class="dropdown-menu">
-                                <li class="dropdown1"><a href="#section0">Accueil</a></li>
-                                <li><a href="#section1">A propos</a></li>
-                                <li><a href="#section2">Galerie</a></li>
-                                <li><a href="#section3">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="social-media">
-                    <a href="https://fr.linkedin.com/in/alexandre-prevots-24050397" target="_blank">
-                        <div class="linkedin"></div>
-                    </a>
-                    <a href="https://www.facebook.com/alex.prevots" target="_blank">
-                        <div class="facebook"></div>
-                    </a>
-                    <a href="https://twitter.com/BlackPandem" target="_blank">
-                        <div class="twitter"></div>
-                    </a>
-                </div>
-            </nav>
-            <!-- END NAVIGATION -->
-
-            <div class="row">
-                <section class="about-title large-12 small-12 columns presentation">
-                    <!--<div data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Eh oui, c'est moi! Vous pouvez m'appeler Alex ;-)" class=" has-tip large-6 small-12 columns avatar">
-                        <img src="img/png/avatar-portfolio.png" alt="Alexandre Prevots avatar">
-                    </div>-->
-                    <div class="large-12 small-12 columns text-intro">
-                        <h1 class="wow pulse">Bonjour!</h1>
-                        <p>Actuellement webdesigner, je souhaite me spécialiser dans l'UX Design.
-                            <br> Passionné de conception web, design et des nouvelles technologies, je suis à l'affût des dernières informations sur la tendance du web actuel.<br> Mon intérêt se porte actuellement sur l'expérience utilisateur qui est une notion devenue primordiale pour la conception des projets.
-                        </p>
-                    </div>
-                </section>
-                <hr>
-                <section class="large-12 columns presentation">
-                    <div class="large-6 columns wow slideInLeft">
-                        <h2>Graphisme et PAO</h2>
-                        <p>Plein d'imagination, j'aime concevoir des projets graphiques en utilisant les logiciels d'Adobe : Photoshop, Illustrator et InDesign.
-                        </p>
-                    </div>
-                    <div class="large-6 columns about-img wow slideInRight">
-                        <div data-tooltip aria-haspopup="true" class="has-tip photoshop" data-disable-hover="false" tabindex="1" title="Logiciel Adobe Photoshop : acquis"></div>
-                        <div data-tooltip aria-haspopup="true" class="has-tip illustrator" data-disable-hover="false" tabindex="1" title="Logiciel Adobe Illustrator : acquis"></div>
-                        <div data-tooltip aria-haspopup="true" class="has-tip indesign" data-disable-hover="false" tabindex="1" title="Logiciel Adobe InDesign : acquis"></div>
-                    </div>
-                </section>
-                <hr>
-                <section class="large-12 columns presentation">
-
-                    <!-- 
-               ******
-               SCREEN 
-               ******
-               !-->
-
-                    <div class="large-6 columns wow about-img slideInLeft about-screen">
-                        <div data-tooltip aria-haspopup="true" class="has-tip github" data-disable-hover="false" tabindex="1" title="Connaissance de l'outil collaboratif et des lignes de commande git et jekyll"></div>
-                        <div data-tooltip aria-haspopup="true" class="has-tip html" data-disable-hover="false" tabindex="1" title="Langage HTML5 : acquis"></div>
-                        <div data-tooltip aria-haspopup="true" class="has-tip css" data-disable-hover="false" tabindex="1" title="Langage CSS3 : acquis"></div>
-                        <div data-tooltip aria-haspopup="true" class="has-tip js" data-disable-hover="false" tabindex="1" title="Langage JavaScript : acquis"></div>
-                        <div data-tooltip aria-haspopup="true" class="has-tip php" data-disable-hover="false" tabindex="1" title="Langage PHP : acquis"></div>
-                    </div>
-                    <div class="large-6 columns  wow slideInRight about-screen">
-                        <h2>Web</h2>
-                        <p>J'aime développer un projet web en utilisant les méthodologies de l'UX Design pour réaliser des sites performants (zoning, wireframe, maquettes, tests utilisateur, etc.)</p>
-                    </div>
-
-                    <!-- 
-               ******
-               MOBILE 
-               ******
-               !-->
-                    <div class="large-6 columns  wow slideInLeft about-smartphone">
-                        <h2>Web</h2>
-                        <p>J'aime développer un projet web en utilisant les méthodologies de l'UX Design pour réaliser des sites performants (zoning, wireframe, maquettes, tests utilisateur, etc.)</p>
-                    </div>
-                    <div class="large-6 columns wow about-img slideInRight about-smartphone">
-                        <div data-tooltip aria-haspopup="true" class="has-tip github" data-disable-hover="false" tabindex="1" title="Connaissance de l'outil collaboratif et des lignes de commande git et jekyll"></div>
-                        <div data-tooltip aria-haspopup="true" class="has-tip html" data-disable-hover="false" tabindex="1" title="Langage HTML5 : acquis"></div>
-                        <div data-tooltip aria-haspopup="true" class="has-tip css" data-disable-hover="false" tabindex="1" title="Langage CSS3 : acquis"></div>
-                        <div data-tooltip aria-haspopup="true" class="has-tip js" data-disable-hover="false" tabindex="1" title="Langage JavaScript : acquis"></div>
-                        <div data-tooltip aria-haspopup="true" class="has-tip php" data-disable-hover="false" tabindex="1" title="Langage PHP : acquis"></div>
-                    </div>
-
-                </section>
-                <hr>
-                <section class="large-12 columns presentation">
-                    <div class="large-6 columns wow slideInLeft">
-                        <h2>Audiovisuel</h2>
-                        <p>J'aime concevoir une animation, un montage vidéo ou des modélisations 3D</p>
-                    </div>
-                    <div class="large-6 columns about-img wow slideInRight">
-                        <div data-tooltip aria-haspopup="true" class="has-tip after" data-disable-hover="false" tabindex="1" title="Logiciel AfterEffects : acquis"></div>
-                        <div data-tooltip aria-haspopup="true" class="has-tip audition" data-disable-hover="false" tabindex="1" title="Logiciel Audition : acquis"></div>
-                        <div data-tooltip aria-haspopup="true" class="has-tip premiere" data-disable-hover="false" tabindex="1" title="Logiciel Premiere Pro : acquis"></div>
-                        <div data-tooltip aria-haspopup="true" class="has-tip sketchup" data-disable-hover="false" tabindex="1" title="Logiciel Sketchup : acquis"></div>
-                    </div>
-                </section>
-                <hr>
-            </div>
-            <section class="large-12 columns work-with">
-                <h2 class="large-12 columns wow slideInDown">J'ai travaillé pour...</h2>
-                <div class="large-12 columns job-img">
-                    <a href="http://www.matmut.fr/" target="_blank">
-                        <div data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="J'effectue actuellement mon alternance au sein du studio graphique au siège social du Groupe Matmut" class=" has-tip matmut wow tada"></div>
-                    </a>
-                    <a href="http://www.comitejumelage-elbeuf.eu/" target="_blank">
-                        <div data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="J'ai effectué mon stage du DUT Métiers du Multimédia pour le Comité de jumelage de la ville d'Elbeuf où j'ai pu concevoir leur site web, développer leur communication à travers les réseaux sociaux et créer des montages vidéos" class=" has-tip comite-elbeuf wow tada"></div>
-                    </a>
-                </div>
-            </section>
 
         </div>
 
-        <!--<hr class="separation-works">-->
-        <div class="section" id="section2">
+    </div>
 
-            <h1>Mes réalisations</h1>
-            <br>
+    <div id="section_about" class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 title_about">
+            <h2>À votre service pour vous apporter la meilleure expertise du digital</h2></div>
+        <div class="col-xs-12 col-sm-4 col-md-4 bloc_about">
+            <img src="img/about/user_experience.svg" class="reveal_icon1">
+            <div class="reveal_txt1 about-texte">
+                <h3>UX Design (User Experience Design)</h3>
+                <p>Rendre l'expérience utilisateur la plus positive possible par rapport à un produit ou un service.</p>
+                <p>Concevoir <b>pour</b> l'utilisateur et <b>avec</b> l'utilisateur, tel est ma devise d'UX designer.</p>
+                <p><q><i>Lorsque l’expérience de l’utilisateur est supérieure à l’attente de l’utilisateur, la confiance est établie.</i></q>
+                    <br><b> Colm Tuite – Designer d’application.</b></p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 bloc_about">
+            <img src="img/about/ui_interface.svg" class="reveal_icon2">
+            <div class="reveal_txt2 about-texte">
+                <h3>UI Design (User Interface Design)</h3>
+                <p>Créer des interfaces design, ergonomiques et responsive.</p>
+                <p><q><i>Le design, c’est la créativité associée à la stratégie.</i></q>
+                    <br><b>Rob Curedale – Designer produit.</b></p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 bloc_about">
+            <img src="img/about/ic_movie_creation_white_24px.svg" class="reveal_icon3">
+            <div class="reveal_txt3 about-texte">
+                <h3>Motion Design</h3>
+                <p>Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla</p>
+                <p><q><i>En terme de graphisme, il y a selon moi deux choses essentielles, la simplicité et la clarté.<br> Un bon design nait de ces deux éléments.</i></q>
+                    <br><b>Lindon Leader – Designer graphique.</b></p>
+            </div>
+        </div>
+    </div>
 
-            <!-- 
-               ******************************
-                        Content filter 
-                ********************************
-            -->
-            <main class="cd-main-content" id="works-anchor">
-                <div class="cd-tab-filter-wrapper">
-                    <div class="cd-tab-filter">
-                        <ul class="cd-filters">
-                            <li class="placeholder">
-                                <a data-type="all" href="#0" class="selected">Tous</a>
-                                <!-- selected option on mobile -->
-                            </li>
-                            <li class="filter"><a href="#0" data-type="all">Tous</a></li>
-                            <li class="filter" data-filter=".color-1"><a href="#0" data-type="color-1">Web</a></li>
-                            <li class="filter" data-filter=".color-2"><a href="#0" data-type="color-2">Graphisme</a></li>
-                            <li class="filter" data-filter=".color-3"><a href="#0" data-type="color-3">Audiovisuel / 3D</a></li>
-                        </ul>
-                        <!-- cd-filters -->
+    <div id="section_work" class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 title_work">
+            <h2>Ils m'ont fait confiance</h2></div>
+        <div class="col-xs-12 col-sm-12 col-md-12 logo-agence">
+            <div class="logo-matmut col-xs-12 col-sm-12 col-md-6">
+                <a href="http://matmut.fr" target="_blank" class="hvr-grow"><img src="img/about/logo-matmut.svg"></a>
+            </div>
+            <div class="logo-comite_jumelage_elbeuf col-xs-12 col-sm-12 col-md-6"><img src="img/about/logo-jumelage-elbeuf.jpg"></div>
+        </div>
+    </div>
+
+    <div id="section_featured" class="col-xs-12 col-sm-12 col-md-12">
+        <div class="title_featured">
+            <h2>Réalisations</h2></div>
+        <div class="col-xs-12 col-sm-12 col-md-6 visuel_featured reveal_left">
+            <div class="img_featured">
+                <a href="ressources/pdf/Livrable-maf.pdf" target="_blank"><img src="img/portfolio/refonte-musee_arts_forains.jpg"></a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 description_featured reveal_bottom">
+            <div class="contenu_featured">
+                <h3>Refonte du site web du Musée des Arts Forains en mobile first</h3>
+                <h4>Travaux pratiques "Service Design" - UX Design - L'École Multimédia</h4>
+                <p>L'objectif de ce TP était de travailler sur l'organisation d'une journée type avec des clients (fictif) avec des ateliers pour générer un nouveau concept en fin de journée.
+                </p>
+                <br>
+                <a href="ressources/pdf/Livrable-maf.pdf" target="_blank" alt="Lien vers le pdf" class="btn_portfolio hvr-grow">Lien vers le pdf de la présentation <img src="img/icons/ic_keyboard_arrow_right_white_24px.svg"></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="section_portfolio" class="col-xs-12 col-sm-12 col-md-12">
+        <!--<div id="projet1" class="cards col-xs-4 col-sm-4 col-md-4"></div>-->
+        <div class="container-fluid">
+            <!-- add extra container element for Masonry -->
+            <div class="grid">
+                <!-- items use Bootstrap .col- classes -->
+                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
+                    <!-- wrap item content in its own element -->
+
+                    <div id="projet1" class="grid-item-content"></div>
+                    <div class="projet_description">
+                        <div>
+                            <h4>Innovation day</h4>
+                            <p>Travaux pratiques "Service Design" - UX Design - L'École Multimédia...</p>
+                            <a href="projets/projet-innovation_day.html">
+                                <button type="button" class="btn btn-primary">Découvrir le projet</button>
+                            </a>
+                        </div>
                     </div>
-                    <!-- cd-tab-filter -->
                 </div>
-                <!-- cd-tab-filter-wrapper -->
+                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
+                    <div id="projet2" class="grid-item-content"></div>
+                    <div class="projet_description">
+                        <div>
+                            <h4>2</h4>
+                            <p>Travaux pratiques "Service Design" - UX Design - L'École Multimédia...</p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".projet2">Découvrir le projet</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
+                    <div id="projet3" class="grid-item-content"></div>
+                    <div class="projet_description">Bonjour</div>
+                </div>
+                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
+                    <div id="projet4" class="grid-item-content"></div>
+                    <div class="projet_description">Bonjour</div>
+                </div>
+                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
+                    <!-- wrap item content in its own element -->
+                    <div id="projet5" class="grid-item-content"></div>
+                    <div class="projet_description">Bonjour</div>
+                </div>
+                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
+                    <div id="projet6" class="grid-item-content"></div>
+                    <div class="projet_description">Bonjour</div>
 
-                <section class="cd-gallery">
-                    <ul>
-                                               <li class="mix color-1 image-wrapper overlay-fade-in">
-                            <a href="#0" data-open="web1">
-                                <img src="img/jpg/gallery/wireframe-cover.jpg" alt="Wireframe nouveau site web Matmut">
-                                <div class="image-overlay-content">
-                                    <h2>Wireframe site web Matmut</h2>
-                                    <p class="price">Nouveau site web Matmut<br> en mobile first</p>
-                                    <a href="#0" class="button" data-open="web1">Voir plus</a>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="mix color-1 image-wrapper overlay-fade-in">
-                            <a href="http://mmirouen.fr/sitedzingstudio/index.php" target="_blank" >
-                                <img src="img/jpg/gallery/mmi-website.jpg" alt="Website DUT MMI">
-                                <div class="image-overlay-content">
-                                    <h2>Site web DUT MMI</h2>
-                                    <p class="price">Projet tutoré DUT MMI</p>
-                                    <a href="http://mmirouen.fr/sitedzingstudio/index.php" class="button" target="_blank">Voir plus</a>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="mix color-1 image-wrapper overlay-fade-in">
-                            <a href="http://comitejumelage-elbeuf.eu/" target="_blank">
-                                <img src="img/jpg/gallery/comite-website.jpg" alt="Comité de jumelage Elbeuf website">
-                                <div class="image-overlay-content">
-                                    <h2>Site web du Comité de jumelage d'Elbeuf</h2>
-                                    <p class="price">Stage DUT MMI</p>
-                                    <a href="http://comitejumelage-elbeuf.eu/" class="button" target="_blank">Voir plus</a>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="mix color-3 image-wrapper overlay-fade-in">
-                            <a href="#0" data-open="audio1">
-                                <img src="img/jpg/gallery/youtube-matmut.jpg" alt="Spot radio matmut">
-                                <div class="image-overlay-content">
-                                    <h2>Spot radio Matmut</h2>
-                                    <p class="price">Animation 1</p>
-                                    <a href="#0" class="button" data-open="audio1">Voir plus</a>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="mix color-2 image-wrapper overlay-fade-in">
-                            <a href="#0" data-open="facebook1">
-                                <img src="img/jpg/gallery/facebook-halloween.jpg" alt="Post Facebook Matmut Halloween">
-                                <div class="image-overlay-content">
-                                    <h2>Post Facebook 1 Matmut</h2>
-                                    <p class="price">Montage photo</p>
-                                    <a href="#0" class="button" data-open="facebook1">Voir plus</a>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="mix color-3 image-wrapper overlay-fade-in">
-                            <a href="#0" data-open="audio2">
-                                <img src="img/jpg/gallery/campagne-film1.jpg" alt="Film 1 campagne des entretiens">
-                                <div class="image-overlay-content">
-                                    <h2>Campagne des entretiens - film 1</h2>
-                                    <p class="price">Communication interne Matmut</p>
-                                    <a href="#0" class="button" data-open="audio2">Voir plus</a>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="mix color-3 image-wrapper overlay-fade-in">
-                            <a href="#0" data-open="audio3">
-                                <img src="img/jpg/gallery/campagne-film2.jpg" alt="Film 2 campagne des entretiens">
-                                <div class="image-overlay-content">
-                                    <h2>Campagne des entretiens - film 2</h2>
-                                    <p class="price">Communication interne Matmut</p>
-                                    <a href="#0" class="button" data-open="audio3">Voir plus</a>
-                                </div>
-                            </a>
-                        </li>                        
-                           
-                        <li class="mix color-3 image-wrapper overlay-fade-in">
-                            <a href="#0" data-open="3D1">
-                                <img src="img/jpg/gallery/106.jpg" alt="Modélisation 3D Le 106">
-                                <div class="image-overlay-content">
-                                    <h2>Modélisation 3D "Le 106"</h2>
-                                    <p class="price">Exercice modélisation 3D</p>
-                                    <a href="#0" class="button" data-open="3D1">Voir plus</a>
-                                </div>
-                            </a>
-                        </li>
-                        
+                </div>
+                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
+                    <div id="projet1" class="grid-item-content"></div>
+                    <div class="projet_description">Bonjour</div>
+                </div>
+                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
+                    <div id="projet1" class="grid-item-content"></div>
+                    <div class="projet_description">Bonjour</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
- 
+    <!-- *************************
+            MODALS 
+************************************ -->
 
-                        <li class="gap"></li>
-                        <li class="gap"></li>
-                        <li class="gap"></li>
-                    </ul>
-                    <div class="cd-fail-message">Oups... Pas encore de résultat ?! Revenez prochainement</div>
-                </section>
-                <!-- cd-gallery -->
-            </main>
-            <!-- cd-main-content -->
-            <!-- 
-               ******************************
-                    End Content filter 
-                ********************************
-            -->
+    <div class="modal fade projet1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel">Innovation day</h3>
+                </div>
+                <div class="modal-body">
+                    <h4>Travaux pratiques "Service Design" - UX Design - L'École Multimédia</h4>
+                    <p>L'objectif de ce TP était de travailler sur l'organisation d'une journée type avec des clients (fictif) avec des ateliers pour générer un nouveau concept en fin de journée.
+                    </p>
+                    <a href="#" alt="Lien vers le pdf">Lien vers le pdf de la présentation</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade projet2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel">Innovation day</h3>
+                </div>
+                <div class="modal-body">
+                    <h4>Travaux pratiques "Service Design" - UX Design - L'École Multimédia</h4>
+                    <p>L'objectif de ce TP était de travailler sur l'organisation d'une journée type avec des clients (fictif) avec des ateliers pour générer un nouveau concept en fin de journée.
+                    </p>
+                    <a href="#" alt="Lien vers le pdf">Lien vers le pdf de la présentation</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- *************************
+            CONTACT 
+************************************ -->
+
+    <div id="section_contact" class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-12 col-md-12 title_work">
+            <h2>Contactez-moi !</h2></div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <a class="bouton_contact hvr-back-pulse" href="mailto:alexandre-prevots@orange.fr?Subject=Contact%20depuis%20le%20portfolio"><img src="img/icons/ic_mail_white_24px.svg"> Envoyez-moi un mail</a>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <p class="choix-contact">ou sur les réseaux sociaux :</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 reseaux_sociaux">
+            <div class="col-xs-12 col-sm-12 col-md-4 icons-reseaux_sociaux">
+                <a href="#" class="hvr-grow"><img src="img/icons/lk_icon.svg"></a>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 icons-reseaux_sociaux">
+                <a href="#" class="hvr-grow"><img src="img/icons/fb_icon.svg"></a>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 icons-reseaux_sociaux">
+                <a href="#" class="hvr-grow"><img src="img/icons/tw_icon.svg"></a>
+            </div>
+        </div>
+
+    </div>
 
 
-            <!-- 
-               ******************************
-                    REVEAL MODAL
-                ********************************
-            -->
+    <footer class="col-xs-12 col-sm-12 col-md-12">
+        <div>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Portfolio</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="alexandreprevots.github.io" property="cc:attributionName" rel="cc:attributionURL">Alexandre Prevots</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">licence Creative Commons Attribution - Pas d&#39;Utilisation Commerciale - Pas de Modification 4.0 International</a>.
+        </div>
+    </footer>
+
+    <a href="#0" class="cd-top">Top</a>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- Parallax movement -->
+    <script type="text/javascript" src="assets/js/parallax_move/main.js"></script>    
+    
+    <!-- Back to top -->
+    <script type="text/javascript" src="assets/js/backtotop/backtotop.js"></script>
 
    
-   <!-- web !--> 
-                   <div class="large reveal wireframe-matmut" id="web1" data-reveal>
-                                   <p>Réalisation d'un wireframe version écran et mobile pour le nouveau site web <a class="lien-gallery" href="http://mobile.matmut.fr/" target="_blank">Matmut</a>.
-                </p>
-                <img src="img/jpg/gallery/wireframe-matmutv6-screen.png" alt="Wireframe nouveau site web Matmut version écran">
-                <img src="img/jpg/gallery/wireframe-matmutv6-mobile.png" alt="Wireframe nouveau site web Matmut version mobile">
+    <!-- Reveal -->
+    <script>
+        // Changing the defaults
+        window.sr = ScrollReveal({
+            reset: true
+        });
 
-                <button class="close-button" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            
-            
-    <!-- graphisme !-->   
-                <div class="reveal" id="facebook1" data-reveal>
-                <img src="img/jpg/gallery/facebook-halloween2.jpg" alt="Post Facebook Matmut Halloween">
-                <p>Réalisation d'un post facebook pour la Matmut Prévention dans le thème d'halloween.
-                Le post est disponible sur la page officielle de <a class="lien-gallery" href="https://www.facebook.com/matmutprevention/?fref=ts" target="_blank">Matmut Prévention</a>
-                </p>
-                <button class="close-button" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-                      
-    <!-- audiovisuel !-->
-            <div class="reveal" id="audio1" data-reveal>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZGpp_2ydSb4?list=PLF970A1CDFDCBEEDB" frameborder="0" allowfullscreen></iframe>
-                <button class="close-button" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            
-                        <div class="reveal" id="audio2" data-reveal>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Z-knXDtxiIg" frameborder="0" allowfullscreen></iframe>
-                <button class="close-button" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            
-                        <div class="reveal" id="audio3" data-reveal>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MwkT3MU9EeE" frameborder="0" allowfullscreen></iframe>
-                <button class="close-button" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            
-                        <div class="reveal" id="audio4" data-reveal>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZGpp_2ydSb4?list=PLF970A1CDFDCBEEDB" frameborder="0" allowfullscreen></iframe>
-                <button class="close-button" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            
-            
-    <!-- 3D !-->
-            <div class="reveal" id="3D1" data-reveal>
-                        <iframe width="640" height="480" src="https://sketchfab.com/models/770cdc84d25448a994053446da8db2f1/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe><p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-    <a href="https://sketchfab.com/models/770cdc84d25448a994053446da8db2f1?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Le hangar 106 Rouen</a>
-    by <a href="https://sketchfab.com/BlackPandem?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">blackpandem</a>
-    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-</p>
-                <button class="close-button" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-                    
-                     
-                      
-                       
+        // Customizing a reveal set
+        sr.reveal('.reveal_basic', {
+            duration: 1000
+        });
+        sr.reveal('.reveal_basic2', {
+            duration: 600,
+            delay: 600
+        });
 
+        sr.reveal('.reveal_left', {
+            origin: 'left',
+            distance: '50rem',
+            duration: 1200
+        });
+        sr.reveal('.reveal_bottom', {
+            origin: 'bottom',
+            distance: '50rem',
+            duration: 1600
+        });
+        // Bloc about
+        sr.reveal('.reveal_icon1', {
+            duration: 700
+        });
+        sr.reveal('.reveal_icon2', {
+            duration: 700,
+            delay: 300
+        });
+        sr.reveal('.reveal_icon3', {
+            duration: 700,
+            delay: 600
+        });
+        sr.reveal('.reveal_txt1', {
+            duration: 700,
+            delay: 100
+        });
+        sr.reveal('.reveal_txt2', {
+            duration: 700,
+            delay: 400
+        });
+        sr.reveal('.reveal_txt3', {
+            duration: 700,
+            delay: 700
+        });
+    </script>
 
+    <!-- Smooth Scroll -->
+    <script>
+        smoothScroll.init();
+    </script>
 
-            <!-- 
-               ******************************
-                    END REVEAL MODAL
-                ********************************
-            -->
-
-        </div>
-
-        <div class="footer large-12 columns" id="section3">
-
-            <a href="mailto:alexandre-prevots@orange.fr?Subject=Contact%20from%20alexandreprevots.github.io" target="_top" class="large-12 columns button contact-button">
-                <img src="img/svg/mail.svg" alt="icon contact"> Envoyez-moi un message
-            </a>
-            <div class="habillage-contact">
-                <hr class="habillage-hr">
-                <p class="habillage-contact-p">ou</p>
-                <hr class="habillage-hr">
-            </div>
-
-            <div class="socialmedia-footer">
-                <a href="https://fr.linkedin.com/in/alexandre-prevots-24050397" target="_blank">
-                    <div class="linkedin-mobile"></div>
-                </a>
-                <a href="https://www.facebook.com/alex.prevots" target="_blank">
-                    <div class="facebook-mobile"></div>
-                </a>
-                <a href="https://twitter.com/BlackPandem" target="_blank">
-                    <div class="twitter-mobile"></div>
-                </a>
-            </div>
-
-            <p class="mentions">Alexandre Prevots 2016</p>
-        </div>
-
-        <script type="text/javascript" src="js/transition-scroll/transition-scroll.js"></script>
-        <!--<script src="js/vendor/jquery.min.js"></script>-->
-        <script src="js/vendor/what-input.min.js"></script>
-        <script src="js/foundation.js"></script>
-        <script src="js/app.js"></script>
-
-        <script src="js/wow/wow.min.js"></script>
-        <script>
-            new WOW().init();
-        </script>
-        <script src="js/menu/sticky-menu.js"></script>
-        <script src="js/contentFilter/jquery.mixitup.min.js"></script>
-        <script src="js/contentFilter/main.js"></script>
-        <!-- Resource jQuery -->
+    <!-- Sticky header -->
+    <!-- <script type="text/javascript" src="assets/js/sticky_header/jquery.sticky.js"></script>
+      <script>
+    $(window).load(function(){
+      $("#header").sticky({ topSpacing: 0 });
+    });
+  </script>-->
 
 </body>
 
