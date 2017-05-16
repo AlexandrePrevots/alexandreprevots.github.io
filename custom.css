@@ -304,7 +304,7 @@ ABOUT
 }
 
 .bloc_about img {
-    width: 7em!important;
+    width: 10em!important;
 }
 
 .title_about h2 {
@@ -338,7 +338,6 @@ WORK
 
 .title_work {
     text-align: center;
-    text-transform: uppercase;
     margin: 2em 0 2em 0;
 }
 
@@ -378,7 +377,7 @@ FEATURED
 .title_featured {}
 
 .title_featured h2 {
-    text-align: left;
+    text-align: center;
     margin: 2em 2em 0 2em;
     color: #fff;
 }
