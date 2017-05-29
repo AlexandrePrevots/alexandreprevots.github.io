@@ -704,25 +704,44 @@ PORTFOLIO
   background: linear-gradient(to right, #16BFFD 0%, #CB3066 100%), linear-gradient(to right, #16BFFD 0%, #CB3066 100%);*/
 }
 
-.visuel1-projet {
+.visuels-projet {
     height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 
 /* ** Projet 1 ** */
 
 #projet1-header {
+    background-image: url(img/portfolio/refonte-musee_arts_forains.jpg);
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+#visuel1-projet1 {
+    background-image: url(ressources/pdf/MuseeArtsForains/1.jpg);
+}
+#visuel2-projet1 {
+    background-image: url(ressources/pdf/MuseeArtsForains/2.jpg);
+}
+
+/* ** Projet 2 ** */
+
+#projet2-header {
     background-image: url(img/portfolio/presentation_innovation_day.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-#visuel1-projet1 {
-    background-image: url(img/portfolio/presentation_innovation_day.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+#visuel1-projet2 {
+    background-image: url(ressources/pdf/MuseeArtsForains/1.jpg);
+}
+#visuel2-projet2 {
+    background-image: url(ressources/pdf/MuseeArtsForains/2.jpg);
 }
 
 
