@@ -501,35 +501,49 @@ REALISATIONS
 }
 
 #projet2 {
-    background-image: url(img/portfolio/img.jpg);
+    background-image: url(img/portfolio/CookE.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #projet3 {
-    background-image: url(img/portfolio/cerf.jpg);
+    background-image: url(img/portfolio/Prochainement.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #projet4 {
-    background-image: url(img/portfolio/galaxie.jpg);
+    background-image: url(img/portfolio/Prochainement.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #projet5 {
-    background-image: url(img/portfolio/genesis.png);
+    background-image: url(img/portfolio/Prochainement.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #projet6 {
-    background-image: url(img/portfolio/ny.jpg);
+    background-image: url(img/portfolio/Prochainement.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#projet7 {
+    background-image: url(img/portfolio/Prochainement.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#projet8 {
+    background-image: url(img/portfolio/Prochainement.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
