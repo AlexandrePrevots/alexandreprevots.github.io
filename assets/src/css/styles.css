@@ -1,0 +1,641 @@
+@charset "UTF-8";
+/*
+Author : Alexandre Prévots
+Version : 1.0
+Description : Portfolio
+*/
+/*************************************************************
+MAIN CONFIG
+*************************************************************/
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif&display=swap");
+a {
+  text-decoration: none !important; }
+
+a,
+a:hover,
+.btn,
+.btn:hover,
+.Menu-list-item {
+  cursor: url("../../img/cursor/metalhand.cur"), url(" ../../img/cursor/metalhand.png"), url(" ../../img/cursor/metalhand.gif"), auto !important; }
+
+canvas {
+  display: block;
+  vertical-align: bottom; }
+
+.second-color {
+  color: #00B69D; }
+
+.white {
+  color: #fff !important; }
+
+.font-light {
+  font-weight: 300; }
+
+.font-regular {
+  font-weight: 400; }
+
+.font-bold {
+  font-weight: 700; }
+
+.text-line {
+  text-decoration: line-through; }
+
+h1,
+h2 {
+  font-family: "Noto Serif", serif !important; }
+
+.title-container, .title-container-white {
+  color: #0B1E38;
+  padding: 0 2em 1em 2em;
+  font-size: 3rem; }
+
+.title-container-white {
+  color: #fff !important; }
+
+.glitch, .glitch-right {
+  color: white;
+  font-size: 100px;
+  position: relative;
+  /*width: 400px;
+    margin: 0 auto;*/ }
+
+@-webkit-keyframes noise-anim {
+  0% {
+    clip: rect(82px, 9999px, 18px, 0); }
+  5% {
+    clip: rect(12px, 9999px, 40px, 0); }
+  10% {
+    clip: rect(78px, 9999px, 19px, 0); }
+  15% {
+    clip: rect(79px, 9999px, 8px, 0); }
+  20% {
+    clip: rect(14px, 9999px, 83px, 0); }
+  25% {
+    clip: rect(34px, 9999px, 37px, 0); }
+  30% {
+    clip: rect(50px, 9999px, 32px, 0); }
+  35% {
+    clip: rect(22px, 9999px, 17px, 0); }
+  40% {
+    clip: rect(39px, 9999px, 68px, 0); }
+  45% {
+    clip: rect(71px, 9999px, 9px, 0); }
+  50% {
+    clip: rect(57px, 9999px, 10px, 0); }
+  55% {
+    clip: rect(76px, 9999px, 16px, 0); }
+  60% {
+    clip: rect(65px, 9999px, 68px, 0); }
+  65% {
+    clip: rect(92px, 9999px, 5px, 0); }
+  70% {
+    clip: rect(60px, 9999px, 35px, 0); }
+  75% {
+    clip: rect(77px, 9999px, 64px, 0); }
+  80% {
+    clip: rect(17px, 9999px, 90px, 0); }
+  85% {
+    clip: rect(66px, 9999px, 77px, 0); }
+  90% {
+    clip: rect(35px, 9999px, 84px, 0); }
+  95% {
+    clip: rect(98px, 9999px, 77px, 0); }
+  100% {
+    clip: rect(53px, 9999px, 58px, 0); } }
+
+@keyframes noise-anim {
+  0% {
+    clip: rect(82px, 9999px, 18px, 0); }
+  5% {
+    clip: rect(12px, 9999px, 40px, 0); }
+  10% {
+    clip: rect(78px, 9999px, 19px, 0); }
+  15% {
+    clip: rect(79px, 9999px, 8px, 0); }
+  20% {
+    clip: rect(14px, 9999px, 83px, 0); }
+  25% {
+    clip: rect(34px, 9999px, 37px, 0); }
+  30% {
+    clip: rect(50px, 9999px, 32px, 0); }
+  35% {
+    clip: rect(22px, 9999px, 17px, 0); }
+  40% {
+    clip: rect(39px, 9999px, 68px, 0); }
+  45% {
+    clip: rect(71px, 9999px, 9px, 0); }
+  50% {
+    clip: rect(57px, 9999px, 10px, 0); }
+  55% {
+    clip: rect(76px, 9999px, 16px, 0); }
+  60% {
+    clip: rect(65px, 9999px, 68px, 0); }
+  65% {
+    clip: rect(92px, 9999px, 5px, 0); }
+  70% {
+    clip: rect(60px, 9999px, 35px, 0); }
+  75% {
+    clip: rect(77px, 9999px, 64px, 0); }
+  80% {
+    clip: rect(17px, 9999px, 90px, 0); }
+  85% {
+    clip: rect(66px, 9999px, 77px, 0); }
+  90% {
+    clip: rect(35px, 9999px, 84px, 0); }
+  95% {
+    clip: rect(98px, 9999px, 77px, 0); }
+  100% {
+    clip: rect(53px, 9999px, 58px, 0); } }
+
+.glitch:after, .glitch-right:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: #00B69D;
+  background: transparent;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse; }
+
+@-webkit-keyframes noise-anim-2 {
+  0% {
+    clip: rect(51px, 9999px, 4px, 0); }
+  5% {
+    clip: rect(83px, 9999px, 41px, 0); }
+  10% {
+    clip: rect(97px, 9999px, 97px, 0); }
+  15% {
+    clip: rect(4px, 9999px, 60px, 0); }
+  20% {
+    clip: rect(74px, 9999px, 7px, 0); }
+  25% {
+    clip: rect(67px, 9999px, 73px, 0); }
+  30% {
+    clip: rect(22px, 9999px, 59px, 0); }
+  35% {
+    clip: rect(11px, 9999px, 32px, 0); }
+  40% {
+    clip: rect(77px, 9999px, 43px, 0); }
+  45% {
+    clip: rect(88px, 9999px, 1px, 0); }
+  50% {
+    clip: rect(92px, 9999px, 83px, 0); }
+  55% {
+    clip: rect(73px, 9999px, 22px, 0); }
+  60% {
+    clip: rect(56px, 9999px, 58px, 0); }
+  65% {
+    clip: rect(9px, 9999px, 72px, 0); }
+  70% {
+    clip: rect(96px, 9999px, 30px, 0); }
+  75% {
+    clip: rect(21px, 9999px, 32px, 0); }
+  80% {
+    clip: rect(39px, 9999px, 48px, 0); }
+  85% {
+    clip: rect(9px, 9999px, 54px, 0); }
+  90% {
+    clip: rect(40px, 9999px, 53px, 0); }
+  95% {
+    clip: rect(19px, 9999px, 14px, 0); }
+  100% {
+    clip: rect(55px, 9999px, 83px, 0); } }
+
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(51px, 9999px, 4px, 0); }
+  5% {
+    clip: rect(83px, 9999px, 41px, 0); }
+  10% {
+    clip: rect(97px, 9999px, 97px, 0); }
+  15% {
+    clip: rect(4px, 9999px, 60px, 0); }
+  20% {
+    clip: rect(74px, 9999px, 7px, 0); }
+  25% {
+    clip: rect(67px, 9999px, 73px, 0); }
+  30% {
+    clip: rect(22px, 9999px, 59px, 0); }
+  35% {
+    clip: rect(11px, 9999px, 32px, 0); }
+  40% {
+    clip: rect(77px, 9999px, 43px, 0); }
+  45% {
+    clip: rect(88px, 9999px, 1px, 0); }
+  50% {
+    clip: rect(92px, 9999px, 83px, 0); }
+  55% {
+    clip: rect(73px, 9999px, 22px, 0); }
+  60% {
+    clip: rect(56px, 9999px, 58px, 0); }
+  65% {
+    clip: rect(9px, 9999px, 72px, 0); }
+  70% {
+    clip: rect(96px, 9999px, 30px, 0); }
+  75% {
+    clip: rect(21px, 9999px, 32px, 0); }
+  80% {
+    clip: rect(39px, 9999px, 48px, 0); }
+  85% {
+    clip: rect(9px, 9999px, 54px, 0); }
+  90% {
+    clip: rect(40px, 9999px, 53px, 0); }
+  95% {
+    clip: rect(19px, 9999px, 14px, 0); }
+  100% {
+    clip: rect(55px, 9999px, 83px, 0); } }
+
+.glitch:before, .glitch-right:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: #00B69D;
+  background: transparent;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse; }
+
+.glitch-right:after {
+  right: 2px !important; }
+
+.glitch-right:before {
+  right: -2px !important; }
+
+.vertical-align {
+  margin: auto; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  font-family: "Nunito", sans-serif !important;
+  font-weight: 400; }
+
+#main-menu {
+  right: 3%;
+  top: 3%;
+  z-index: 1030; }
+  #main-menu div {
+    color: #fff;
+    cursor: url("../../img/cursor/metalhand.cur"), url(" ../../img/cursor/metalhand.png"), url(" ../../img/cursor/metalhand.gif"), auto !important; }
+  #main-menu div img {
+    margin-right: 0.5em; }
+
+.main-button {
+  background: #C9285A;
+  width: 50%;
+  height: 60px;
+  color: #fff;
+  padding: 1em; }
+
+.link {
+  /* RESET */
+  text-decoration: none;
+  line-height: 1;
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  padding: 5px 5px;
+  overflow: hidden;
+  color: #0B1E38;
+  font-weight: 700;
+  vertical-align: bottom;
+  -webkit-transition: color .3s ease-out;
+  -o-transition: color .3s ease-out;
+  transition: color .3s ease-out; }
+
+.link::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(calc(100% - 2px));
+  -ms-transform: translateY(calc(100% - 2px));
+  transform: translateY(calc(100% - 2px));
+  width: 100%;
+  height: 100%;
+  background: #C9285A;
+  -webkit-transition: -webkit-transform .25s ease-out;
+  transition: -webkit-transform .25s ease-out;
+  -o-transition: transform .25s ease-out;
+  transition: transform .25s ease-out;
+  transition: transform .25s ease-out, -webkit-transform .25s ease-out; }
+
+.link:hover {
+  color: #fff; }
+  .link:hover svg path#arrow-right-blue-to-white {
+    fill: #fff !important; }
+
+.link:hover::before {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: -webkit-transform .25s ease-out;
+  transition: -webkit-transform .25s ease-out;
+  -o-transition: transform .25s ease-out;
+  transition: transform .25s ease-out;
+  transition: transform .25s ease-out, -webkit-transform .25s ease-out; }
+
+.metalhead {
+  cursor: url("../../img/cursor/metalhand.cur"), url(" ../../img/cursor/metalhand.png"), url(" ../../img/cursor/metalhand.gif"), auto !important; }
+
+/* Desktop*/
+.close-menu {
+  z-index: 1050; }
+
+#navigation-split {
+  z-index: 1; }
+
+.Menu-list {
+  font-size: 1.8em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /*transform: rotateX(-10deg) rotateY(20deg);*/ }
+
+.Menu-list-item {
+  position: relative;
+  color: transparent; }
+  .Menu-list-item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 49%;
+    left: -10%;
+    right: -10%;
+    height: 4px;
+    border-radius: 4px;
+    margin-top: -2px;
+    background: #0B1E38;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+    transition: -webkit-transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+    -o-transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+    transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+    transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98), -webkit-transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+    z-index: 1; }
+
+.Mask {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  color: #fff;
+  top: 0;
+  height: 49%;
+  -webkit-transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  -o-transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98); }
+  .Mask span {
+    display: block; }
+
+.Mask + .Mask {
+  top: 48.9%;
+  height: 51.1%; }
+  .Mask + .Mask span {
+    -webkit-transform: translateY(-49%);
+    -ms-transform: translateY(-49%);
+    transform: translateY(-49%); }
+
+.Menu-list-item:hover .Mask,
+.Menu-list-item:active .Mask {
+  color: #C9285A;
+  -webkit-transform: skewX(12deg) translateX(5px);
+  -ms-transform: skewX(12deg) translateX(5px);
+  transform: skewX(12deg) translateX(5px); }
+
+.Menu-list-item:hover .Mask + .Mask,
+.Menu-list-item:active .Mask + .Mask {
+  -webkit-transform: skewX(12deg) translateX(-5px);
+  -ms-transform: skewX(12deg) translateX(-5px);
+  transform: skewX(12deg) translateX(-5px); }
+
+.Menu-list-item:hover::before,
+.Menu-list-item:active::before {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); }
+
+#navigation-desktop {
+  background: #0B1E38;
+  right: 0;
+  width: 60%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1050;
+  -webkit-transform: translateX(1300px);
+  -ms-transform: translateX(1300px);
+  transform: translateX(1300px);
+  color: #fff; }
+  #navigation-desktop ul li {
+    list-style-type: none;
+    margin-bottom: 2em; }
+    #navigation-desktop ul li a {
+      color: #fff;
+      font-size: 1.8em; }
+  #navigation-desktop .close-menu {
+    position: absolute;
+    right: 3%;
+    top: 3%; }
+    #navigation-desktop .close-menu div {
+      color: #fff;
+      cursor: url("../../img/cursor/metalhand.cur"), url(" ../../img/cursor/metalhand.png"), url(" ../../img/cursor/metalhand.gif"), auto !important; }
+    #navigation-desktop .close-menu div img {
+      margin-right: 0.5em; }
+
+.black-screen-menu {
+  background: rgba(0, 0, 0, 0.75);
+  display: none !important;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  cursor: url("../../img/cursor/metalhand.cur"), url(" ../../img/cursor/metalhand.png"), url(" ../../img/cursor/metalhand.gif"), auto !important; }
+
+/* ---- navigation mobile ---- */
+#navigation-mobile {
+  width: 100%;
+  background: #fff;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+/* ---- particles.js container ---- */
+#particles-js {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  background-image: url("");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat; }
+  #particles-js canvas {
+    overflow: hidden; }
+
+/*************************************************************
+HOME
+*************************************************************/
+section#home {
+  height: 100vh;
+  color: #fff;
+  display: -ms-grid;
+  display: grid;
+  background: #0B1E38;
+  overflow-x: hidden;
+  z-index: 0 !important; }
+  section#home a {
+    color: #fff; }
+  section#home #home-main_entrance {
+    z-index: 998 !important; }
+    section#home #home-main_entrance div img#home-texte-presentation-logo {
+      margin-bottom: 3em; }
+  section#home #home-texte-presentation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 999 !important; }
+    section#home #home-texte-presentation div {
+      margin: auto !important; }
+    section#home #home-texte-presentation h1 {
+      font-size: 2.6em; }
+    section#home #home-texte-presentation p {
+      font-size: 1.4em; }
+
+#home-image-myself {
+  z-index: -1 !important;
+  background: url("../../img/dualtone-visuel-home.jpg");
+  background-position: right;
+  background-size: cover; }
+
+#home-about_me {
+  padding: 5em 0;
+  color: #fff;
+  background: #00B69D;
+  background-image: -webkit-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+  background-image: -moz-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+  background-image: -o-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+  background-image: -webkit-repeating-linear-gradient(315deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+  background-image: -o-repeating-linear-gradient(315deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+  background-image: repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+  -webkit-background-size: 4px 4px;
+  -moz-background-size: 4px 4px;
+  background-size: 4px 4px; }
+
+/*************************************************************
+WORKS
+*************************************************************/
+#home-works {
+  padding: 5em 0;
+  color: #fff;
+  background: #0B1E38;
+  background-image: -webkit-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+  background-image: -moz-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+  background-image: -o-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+  background-image: -webkit-repeating-linear-gradient(315deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+  background-image: -o-repeating-linear-gradient(315deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+  background-image: repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+  -webkit-background-size: 4px 4px;
+  -moz-background-size: 4px 4px;
+  background-size: 4px 4px; }
+
+.title-cards-project {
+  color: #00B69D;
+  text-transform: uppercase;
+  font-family: "Noto Serif", serif !important;
+  font-size: 3em;
+  z-index: 1; }
+
+.home-works-tags {
+  color: #adb6ff; }
+
+.home-works-card {
+  margin-top: 10em; }
+
+/*************************************************************
+They trust me
+*************************************************************/
+#home-corporation {
+  padding: 5em 0;
+  color: #fff;
+  background: url("../../img/corporation/dualtone-ny-made_by_prevots_alexandre.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat; }
+  #home-corporation h2 {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
+  #home-corporation .home-corporation-bg_white-logo {
+    background: white;
+    padding: 1.5em; }
+  #home-corporation #home-corporation-logos div img {
+    margin-top: 3em; }
+
+/*************************************************************
+Contact form
+*************************************************************/
+#home-contact {
+  color: #fff;
+  background: #0B1E38;
+  background-image: -webkit-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+  background-image: -moz-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+  background-image: -o-repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+  background-image: -webkit-repeating-linear-gradient(315deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+  background-image: -o-repeating-linear-gradient(315deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+  background-image: repeating-linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, 0.1) 3px);
+  -webkit-background-size: 4px 4px;
+  -moz-background-size: 4px 4px;
+  background-size: 4px 4px; }
+  #home-contact .home-contact-right-container {
+    background: #fff;
+    color: #333;
+    padding: 10em 0; }
+    #home-contact .home-contact-right-container p {
+      color: #C9285A; }
+  #home-contact .home-contact-left-container {
+    padding: 3em 0; }
+
+/*************************************************************
+MEDIA QUERIES
+*************************************************************/
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+  .title-cards-project {
+    font-size: 1.5em; }
+  #home-corporation {
+    text-align: center; } }
+
+@media only screen and (max-width: 768px) {
+  #navigation-desktop, #main-menu, #navigation-split {
+    display: none; }
+  .title-cards-project {
+    font-size: 2.8em; } }
+
+@media only screen and (min-width: 768px) {
+  /* ---- navigation mobile ---- */
+  #navigation-mobile {
+    display: none; } }
+
+@media only screen and (max-width: 1024px) {
+  #home-image-myself {
+    background-position: 75%; }
+  #home-texte-presentation img {
+    width: 20%; } }

@@ -1,0 +1,588 @@
+/*
+Author : Alexandre Prévots
+Version : 1.0
+Description : Portfolio
+*/
+
+
+/*************************************************************
+MAIN CONFIG
+*************************************************************/
+
+//Général
+a {
+    text-decoration: none!important;
+}
+
+a,
+a:hover,
+.btn,
+.btn:hover,
+.Menu-list-item {
+    cursor: url('../../img/cursor/metalhand.cur'), url(' ../../img/cursor/metalhand.png'), url(' ../../img/cursor/metalhand.gif'), auto!important;
+}
+
+$cursor-metal: url('../../img/cursor/metalhand.cur'),
+url(' ../../img/cursor/metalhand.png'),
+url(' ../../img/cursor/metalhand.gif'),
+auto!important;
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+//Colors
+$main-gradient: linear-gradient( 109.6deg,
+rgba(41,
+125,
+182,
+1) 3.6%,
+rgba(77,
+58,
+151,
+1) 51%,
+rgba(103,
+55,
+115,
+1) 92.9%);
+$main-color: #0B1E38;
+$second-color: #00B69D;
+$link-color: #C9285A;
+$color-works-tags: #adb6ff;
+.second-color {
+    color: $second-color;
+}
+
+.white {
+    color: #fff!important;
+}
+
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+$main-font: 'Nunito',
+sans-serif!important;
+$title-font: 'Noto Serif',
+serif!important;
+.font-light {
+    font-weight: 300;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-line {
+    text-decoration: line-through;
+}
+
+h1,
+h2 {
+    font-family: $title-font;
+}
+
+.title-container {
+    color: $main-color;
+    padding: 0 2em 1em 2em;
+    font-size: 3rem;
+}
+
+.title-container-white {
+    @extend .title-container;
+    color: #fff!important;
+}
+
+// Glitch effect
+.glitch {
+    color: white;
+    font-size: 100px;
+    position: relative;
+    /*width: 400px;
+    margin: 0 auto;*/
+}
+
+@keyframes noise-anim {
+    $steps: 20;
+    @for $i from 0 through $steps {
+        #{percentage($i*(1/$steps))} {
+            clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+        }
+    }
+}
+
+.glitch:after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -1px 0 red;
+    top: 0;
+    color: $second-color;
+    background: transparent;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+    $steps: 20;
+    @for $i from 0 through $steps {
+        #{percentage($i*(1/$steps))} {
+            clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+        }
+    }
+}
+
+.glitch:before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: 1px 0 blue;
+    top: 0;
+    color: $second-color;
+    background: transparent;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+
+.glitch-right {
+    @extend .glitch;
+    &:after {
+        right: 2px!important;
+    }
+    &:before {
+        right: -2px!important;
+    }
+}
+
+//Alignement
+.vertical-align {
+    margin: auto;
+}
+
+//Shadows
+$boxShadow: 0 1px 1px 0 rgba(60,
+64,
+67,
+.08),
+0 1px 3px 1px rgba(60,
+64,
+67,
+.16);
+//Main
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $main-font;
+    font-weight: 400;
+}
+
+#main-menu {
+    right: 3%;
+    top: 3%;
+    z-index: 1030;
+    div {
+        color: #fff;
+        cursor: $cursor-metal;
+    }
+    div img {
+        margin-right: 0.5em;
+    }
+}
+
+//Buttons
+.main-button {
+    background: $link-color;
+    width: 50%; height: 60px;
+    color: #fff;
+    padding: 1em;
+}
+
+//Links
+.link {
+    /* RESET */
+    text-decoration: none;
+    line-height: 1;
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    padding: 5px 5px;
+    overflow: hidden;
+    color: $main-color;
+    font-weight: 700;
+    vertical-align: bottom;
+    transition: color .3s ease-out;
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform: translateY(calc(100% - 2px));
+    width: 100%;
+    height: 100%;
+    background: $link-color;
+    transition: transform .25s ease-out;
+}
+
+.link:hover {
+    color: #fff;
+    svg path#arrow-right-blue-to-white {
+        fill: #fff!important;
+    }
+}
+
+.link:hover::before {
+    transform: translateY(0);
+    transition: transform .25s ease-out;
+}
+
+.metalhead {
+    cursor: $cursor-metal;
+}
+
+//Navigation
+
+/* Desktop*/
+
+.close-menu {
+    z-index: 1050;
+}
+
+#navigation-split {
+    z-index: 1;
+}
+
+// === Variables =====
+$perspective: 60rem;
+$split-position: 49%;
+$split-thickness: 4px;
+// === Menu <ul> =====
+.Menu-list {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*transform: rotateX(-10deg) rotateY(20deg);*/ // overwritten by JS
+}
+
+// === Menu item =====
+.Menu-list-item {
+    position: relative;
+    color: transparent;
+    // === Split Line =====
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: $split-position;
+        left: -10%;
+        right: -10%;
+        height: $split-thickness;
+        border-radius: $split-thickness;
+        margin-top: -($split-thickness / 2);
+        background: $main-color;
+        transform: scale(0);
+        transition: transform .8s cubic-bezier(.16, 1.08, .38, .98);
+        z-index: 1;
+    }
+}
+
+// === Top/bottom mask =====
+.Mask {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    color: #fff;
+    top: 0;
+    height: $split-position;
+    transition: all .8s cubic-bezier(.16, 1.08, .38, .98);
+    span {
+        display: block;
+    }
+}
+
+// === Bottom mask specific =====
+.Mask + .Mask {
+    top: $split-position - 0.1;
+    height: 100 - $split-position + 0.1;
+    span {
+        transform: translateY(-$split-position);
+    }
+}
+
+// === Where the fun stuff happens =====
+.Menu-list-item:hover,
+.Menu-list-item:active {
+    .Mask {
+        color: $link-color;
+        transform: skewX(12deg) translateX(5px);
+    }
+    .Mask + .Mask {
+        transform: skewX(12deg) translateX(-5px);
+    }
+    &::before {
+        transform: scale(1);
+    }
+}
+
+#navigation-desktop {
+    background: $main-color;
+    right: 0;
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    z-index: 1050;
+    transform: translateX(1300px);
+    color: #fff;
+    ul li {
+        list-style-type: none;
+        margin-bottom: 2em;
+        a {
+            color: #fff;
+            font-size: 1.8em;
+        }
+    }
+    .close-menu {
+        position: absolute;
+        right: 3%;
+        top: 3%;
+        div {
+            color: #fff;
+            cursor: $cursor-metal
+        }
+        div img {
+            margin-right: 0.5em;
+        }
+    }
+}
+
+.black-screen-menu {
+    background: rgba(0, 0, 0, 0.75);
+    display: none!important;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    cursor: $cursor-metal
+}
+
+/* ---- navigation mobile ---- */
+#navigation-mobile{
+    width: 100%;
+    background: #fff;
+    height: 80px;
+    display: flex;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    canvas {
+        overflow: hidden;
+    }
+}
+
+
+/*************************************************************
+HOME
+*************************************************************/
+
+.scroll-down{
+
+}
+section#home {
+    height: 100vh;
+    color: #fff;
+    display: grid;
+    background: $main-color;
+    overflow-x: hidden;
+    z-index: 0!important;
+    a {
+        color: #fff;
+    }
+    #home-main_entrance {
+        z-index: 998!important;
+        div img#home-texte-presentation-logo {
+            margin-bottom: 3em;
+        }
+    }
+    #home-texte-presentation {
+        display: flex;
+        z-index: 999!important;
+        div {
+            margin: auto!important;
+        }
+        h1 {
+            font-size: 2.6em;
+        }
+        p {
+            font-size: 1.4em;
+        }
+    }
+}
+
+#home-image-myself {
+    z-index: -1!important;
+    background: url('../../img/dualtone-visuel-home.jpg');
+    background-position: right;
+    background-size: cover;
+}
+
+#home-about_me {
+    padding: 5em 0;
+    color: #fff;
+    background: $second-color;
+    background-image: -webkit-repeating-linear-gradient(135deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .1) 3px);
+    background-image: -moz-repeating-linear-gradient(135deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .1) 3px);
+    background-image: -o-repeating-linear-gradient(135deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .1) 3px);
+    background-image: repeating-linear-gradient(135deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .1) 3px);
+    -webkit-background-size: 4px 4px;
+    -moz-background-size: 4px 4px;
+    background-size: 4px 4px;
+}
+
+
+/*************************************************************
+WORKS
+*************************************************************/
+
+#home-works {
+    padding: 5em 0;
+    color: #fff;
+    background: $main-color;
+    background-image: -webkit-repeating-linear-gradient(135deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .1) 3px);
+    background-image: -moz-repeating-linear-gradient(135deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .1) 3px);
+    background-image: -o-repeating-linear-gradient(135deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .1) 3px);
+    background-image: repeating-linear-gradient(135deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .1) 3px);
+    -webkit-background-size: 4px 4px;
+    -moz-background-size: 4px 4px;
+    background-size: 4px 4px;
+}
+
+.title-cards-project {
+    color: $second-color;
+    text-transform: uppercase;
+    font-family: $title-font;
+    font-size: 3em;
+    z-index: 1;
+}
+
+.home-works-tags {
+    color: $color-works-tags;
+}
+
+.home-works-card {
+    margin-top: 10em;
+}
+
+
+/*************************************************************
+They trust me
+*************************************************************/
+
+#home-corporation {
+    padding: 5em 0;
+    color: #fff;
+    background: url('../../img/corporation/dualtone-ny-made_by_prevots_alexandre.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    h2 {
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    }
+    .home-corporation-bg_white-logo {
+        background: rgba(255, 255, 255, 1);
+        padding: 1.5em;
+    }
+    #home-corporation-logos div img{
+        margin-top: 3em;
+    }
+}
+
+
+/*************************************************************
+Contact form
+*************************************************************/
+
+#home-contact {
+    color: #fff;
+    background: $main-color;
+    background-image: -webkit-repeating-linear-gradient(135deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .1) 3px);
+    background-image: -moz-repeating-linear-gradient(135deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .1) 3px);
+    background-image: -o-repeating-linear-gradient(135deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .1) 3px);
+    background-image: repeating-linear-gradient(135deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .1) 3px);
+    -webkit-background-size: 4px 4px;
+    -moz-background-size: 4px 4px;
+    background-size: 4px 4px;
+    .home-contact-right-container {
+        background: #fff;
+        color: #333;
+        padding: 10em 0;
+        p{
+            color: $link-color;
+        }
+    }    
+    .home-contact-left-container {
+        padding: 3em 0;
+    }
+}
+
+
+/*************************************************************
+MEDIA QUERIES
+*************************************************************/
+
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+    .title-cards-project {
+        font-size: 1.5em;
+    }
+    #home-corporation {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #navigation-desktop, #main-menu, #navigation-split{
+        display: none;
+    }
+    .title-cards-project {
+        font-size: 2.8em;
+    }
+}
+
+@media only screen and (min-width : 768px){
+/* ---- navigation mobile ---- */
+#navigation-mobile{
+display: none;
+}
+}
+@media only screen and (max-width: 1024px) {
+    #home-image-myself {
+        background-position: 75%;
+    }
+    #home-texte-presentation {
+        img {
+            width: 20%;
+        }
+    }
+}
