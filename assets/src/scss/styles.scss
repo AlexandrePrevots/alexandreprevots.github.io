@@ -199,8 +199,6 @@ body {
 //Buttons
 .main-button {
     background: $link-color;
-    width: 50%;
-    height: 60px;
     color: #fff;
     padding: 1em;
 }
@@ -408,7 +406,58 @@ $split-thickness: 4px;
 HOME
 *************************************************************/
 
-.scroll-down {}
+.anim-scroll-down {
+    width: 7%;
+    #scroll1 {
+        animation: scrollDown1 2s infinite linear;
+    }
+    #scroll2 {
+        animation: scrollDown2 2s infinite linear;
+    }
+    #scroll3 {
+        transform: translateY(-25px);
+        animation: scrollDown3 2s infinite linear;
+    }
+}
+
+@keyframes scrollDown1 {
+    0% {
+        opacity: 0;
+    }
+    45% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes scrollDown2 {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes scrollDown3 {
+    0% {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    45% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+}
 
 section#home {
     height: 100vh;
@@ -562,6 +611,11 @@ MEDIA QUERIES
 }
 
 @media only screen and (max-width: 768px) {
+    /*HOME*/
+    section#home {
+        height: 100%;
+        padding: 2em 0;
+    }
     .title-container {
         color: $main-color;
         padding: 0 1em 1em 1em;
@@ -592,10 +646,8 @@ MEDIA QUERIES
 }
 
 @media only screen and (min-width: 768px) {
-    #home-image-myself {
-        img {
+    #home-image-myself-mobile{
             display: none;
-        }
     }
 }
 
