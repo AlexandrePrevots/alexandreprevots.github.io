@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <title>Alexandre Prevots, UX designer | Portfolio</title>
@@ -29,8 +29,6 @@
             <div class="closeMenu"><img src="assets/img/ic/ic-close.svg" alt="icon menu"><span class="align-middle">Fermer</span></div>
         </div>
 
-
-        <!-- @NOTE: the onclicks are used for touch devices since I'm lazy and didnt use <a> tags -->
         <div id="navigation-split" class="container d-flex">
             <ul class="Menu-list" data-offset="10">
                 <a href="#home" class="navigation-links-close">
@@ -79,7 +77,7 @@
         <div id="openMenu"><img src="assets/img/ic/ic-menu.svg" alt="icon menu"><span class="align-middle">Menu</span></div>
     </div>
 
-    <!-- Ajoute data-tilt pour effet 3D -->
+    <!-- Ajouter data-tilt pour effet 3D -->
 
     <!-- Home -->
     <img id="home-image-myself-mobile" src="assets/img/dualtone-visuel-home-mobile.jpg" alt="Photo d'Alexandre Prévots" class="img-fluid">
@@ -92,15 +90,15 @@
                     <h1>Hi! I'm Alexandre <span class="text-uppercase font-bold">Prevots</span></h1>
                     <br>
                     <p class="second-color">A French <span class="text-line metalhead">metalhead</span> <span class="font-bold">UX Designer</span></p>
-                    <a href="#home-about_me" class="scroll-down text-center">
-            
-<svg class="anim-scroll-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 48">
-  <path id="scroll3" fill="#fff" d="M12 42.779l.319-.197-5.359-8.667-5.004-8.095h20.088l-5.004 8.095-5.359 8.667.319.197.319-.197-.319.197.319.197 5.359-8.667 5.712-9.239H.61l5.712 9.239L12 43.492l.319-.516z"/>
-  <path id="scroll1" opacity=".3" fill="#fff" d="M12 30.412l.319-.197-5.359-8.667-5.004-8.095h20.088l-5.004 8.095-5.359 8.667.319.197.319-.197-.319.197.319.197 5.359-8.667 5.712-9.239H.61l5.712 9.239L12 31.125l.319-.516z"/>
-  <path id="scroll2" opacity=".1" fill="#fff" d="M12 18.5l.319-.197L6.96 9.636 1.956 1.542h20.088L17.04 9.636l-5.359 8.667.319.197.319-.197L12 18.5l.319.197 5.359-8.666L23.39.792H.61l5.712 9.239L12 19.213l.319-.516z"/>
-</svg>
+                    <br>
+                    <br>
 
-                    </a>
+                    <svg class="anim-scroll-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 48">
+                        <path id="scroll3" fill="#fff" d="M12 42.779l.319-.197-5.359-8.667-5.004-8.095h20.088l-5.004 8.095-5.359 8.667.319.197.319-.197-.319.197.319.197 5.359-8.667 5.712-9.239H.61l5.712 9.239L12 43.492l.319-.516z" />
+                        <path id="scroll1" opacity=".3" fill="#fff" d="M12 30.412l.319-.197-5.359-8.667-5.004-8.095h20.088l-5.004 8.095-5.359 8.667.319.197.319-.197-.319.197.319.197 5.359-8.667 5.712-9.239H.61l5.712 9.239L12 31.125l.319-.516z" />
+                        <path id="scroll2" opacity=".1" fill="#fff" d="M12 18.5l.319-.197L6.96 9.636 1.956 1.542h20.088L17.04 9.636l-5.359 8.667.319.197.319-.197L12 18.5l.319.197 5.359-8.666L23.39.792H.61l5.712 9.239L12 19.213l.319-.516z" />
+                    </svg>
+
                 </div>
                 <div id="particles-js"></div>
             </div>
@@ -132,7 +130,7 @@
             <!-- Card left -->
             <div class="row justify-content-center">
                 <div class="col-sm-4">
-                    <img src="assets/img/works/card-work-heroes.jpg" class="img-fluid" data-tilt>
+                    <img src="assets/img/works/card-work-hackathon-toshiba.jpg" class="img-fluid" data-tilt>
                 </div>
                 <div class="col-sm-5 text-left pl-5">
                     <h3 class="glitch title-cards-project text-left" data-text="T-REX">T-REX</h3>
@@ -150,15 +148,66 @@
 
             <!-- Card right -->
             <div class="row justify-content-center home-works-card">
+                <!--Only mobile-->
+                <div class="col-sm-4 only-mobile">
+                    <img src="assets/img/works/card-work-newsomatic.jpg" class="img-fluid" data-tilt>
+                </div>
+                <!-- -->
                 <div class="col-sm-5 text-right pr-5">
-                    <h3 class="glitch-right title-cards-project " data-text="Superheroes">Superheroes</h3>
-                    <p class="home-works-tags">3D/Motion design</p>
+                    <h3 class="glitch-right title-cards-project" data-text="News-O-Matic">News-O-Matic</h3>
+                    <p class="home-works-tags">UX design</p>
                     <br>
-                    <p class="text-right font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae ornare augue, mollis euismod orci. Donec consequat eu felis quis iaculis. Proin euismod augue vestibulum imperdiet pretium. Vivamus vel nulla ut nisl placerat luctus. Aliquam vulputate magna eget felis molestie vulputate. Fusce gravida porttitor dui in consectetur. Vestibulum ut urna purus. Nulla vitae euismod nunc. Nulla imperdiet dignissim quam nec porta.</p>
+                    <h5><b>Improving the user experience of the application News-O-Matic</b></h5>
+                    <p class="text-right font-light">Final project of my master's degree with the customer "News-O-Matic". I've used the UX methodology to answer the issue "How to develop the News-O-Matic application internationally while increasing its number of sales ?"
+                    </p>
+                    <a href="hackathon-matmut.html" class="link white">Discover the project <img src="assets/img/ic/ic-arrow_right.svg" alt=""></a>
+                </div>
+                <div class="col-sm-4 only-desktop">
+                    <img src="assets/img/works/card-work-newsomatic.jpg" class="img-fluid" data-tilt>
+                </div>
+            </div>
+
+
+            <!-- Card left -->
+            <div class="row justify-content-center home-works-card">
+                <div class="col-sm-4">
+                    <img src="assets/img/works/card-work-musee-arts-forains.jpg" class="img-fluid" data-tilt>
+                </div>
+                <div class="col-sm-5 text-left pl-5">
+                    <h3 class="glitch title-cards-project text-left" data-text="Musée des Arts Forains">Musée des Arts Forains</h3>
+                    <p class="home-works-tags">UX/UI design</p>
+                    <br>
+
+                    <h5><b>Redesign of the website of "Musée des Arts Forains"</b></h5>
+                    <p class="text-left font-light">Project of my master's degree.
+                        <br> How to support the user before, during and after his visit, by mixing utility, use and mobile experience ? What means can be used to provide users with an unforgettable experience, both in the real world and in the virtual world ?
+                    </p>
                     <a href="#" class="link white">Discover the project <img src="assets/img/ic/ic-arrow_right.svg" alt=""></a>
                 </div>
-                <div class="col-sm-4">
-                    <img src="assets/img/works/card-work-heroes.jpg" class="img-fluid" data-tilt>
+            </div>
+
+
+            <!-- Card right -->
+            <div class="row justify-content-center home-works-card">
+                <!--Only mobile-->
+                <div class="col-sm-4 only-mobile">
+                    <img src="assets/img/works/card-work-hackathon-matmut.jpg" class="img-fluid" data-tilt>
+                </div>
+                <!-- -->
+                <div class="col-sm-5 text-right pr-5">
+                    <h3 class="glitch-right title-cards-project " data-text="Matmut voice">Matmut voice</h3>
+                    <p class="home-works-tags">UX/UI design</p>
+                    <br>
+                    <h5><img src="assets/img/ic/ic-trophy.svg" width="32"> <span class="align-middle">2<sup>nd</sup> place at the Matmut Hackathon</span></h5>
+                    <br>
+                    <h5><b>Your accomplice to take the road</b></h5>
+                    <p class="text-right font-light">Project implemented in 24 hours with the subject
+                        <br> "How the Matmut can she become a digital reference for young drivers ?".
+                    </p>
+                    <a href="hackathon-matmut.html" class="link white">Discover the project <img src="assets/img/ic/ic-arrow_right.svg" alt=""></a>
+                </div>
+                <div class="col-sm-4 only-desktop">
+                    <img src="assets/img/works/card-work-hackathon-matmut.jpg" class="img-fluid" data-tilt>
                 </div>
             </div>
         </div>
@@ -170,9 +219,9 @@
         <h2 class="title-container-white font-bold">They trust me</h2>
         <div class="container">
             <div id="home-corporation-logos" class="row text-center">
-                <div class="col-md-4 col-sm-12 vertical-align"><img src="assets/img/corporation/logo-matmut.svg" alt="Logo Matmut" class="img-fluid" width="170"></div>
-                <div class="col-md-4 col-sm-12 vertical-align"><img src="assets/img/corporation/Toshiba_logo.svg" alt="Logo Toshiba" class="img-fluid home-corporation-bg_white-logo" width="200"></div>
-                <div class="col-md-4 col-sm-12 vertical-align"><img src="assets/img/corporation/logo-jumelage-elbeuf.jpg" alt="Logo Comité de jumelage de la ville d'Elbeuf" class="img-fluid" width="100"></div>
+                <div class="col-md-4 col-sm-12 vertical-align"><img src="assets/img/corporation/logo-matmut.svg" alt="Logo Matmut" class="img-fluid" width="125"></div>
+                <div class="col-md-4 col-sm-12 vertical-align"><img src="assets/img/corporation/Toshiba_logo.svg" alt="Logo Toshiba" class="img-fluid home-corporation-bg_white-logo" width="160"></div>
+                <div class="col-md-4 col-sm-12 vertical-align"><img src="assets/img/corporation/logo-jumelage-elbeuf.jpg" alt="Logo Comité de jumelage de la ville d'Elbeuf" class="img-fluid" width="80"></div>
             </div>
 
 
@@ -183,31 +232,35 @@
     <!--  Contact form -->
     <section id="home-contact" class="container-fluid overflow-hidden">
         <div class="row">
-            <div class="col-md-6 home-contact-left-container">
+            <div class="col-md-12 home-contact-left-container">
                 <h2 class="title-container-white font-bold">Contact me</h2>
                 <br>
                 <div class="text-center">
-                    <a href="#" class="text-center align-middle">
-                        <button type="button" class="btn main-button"><img src="assets/img/ic/ic-email.svg"> Send me an email</button>
+                    <a href="mailto:alexandreprevots.pro@gmail.com?" subject="Contact from your website" class="text-center align-middle">
+                        <button type="button" class="btn main-button"><img src="assets/img/ic/ic-email.svg"> by email</button>
                     </a>
                 </div>
             </div>
-            <div class="col-md-6 home-contact-right-container">
-                <h3 class="text-center"><b>or</b> in social medias</h3>
+            <div class="col-md-12 home-contact-social-medias">
+                <h3 class="text-center"><b>or</b> on social medias</h3>
                 <br>
                 <div class="container text-center">
                     <div class="row">
-                        <a href="#" class="col-md-3 mx-auto"><img src="assets/img/rs/Messenger_Logo_Color_RGB.svg" alt="Logo Messenger" width="70">
-                            <br>Messenger</a>
-                        <a href="#" class="col-md-3 mx-auto"><img src="assets/img/rs/LI-In-Bug.png" alt="Logo Linkedin" width="80">
-                            <br>Linkedin</a>
-                        <a href="#" class="col-md-3 mx-auto"><img src="assets/img/rs/Twitter_Social_Icon_Circle_Color.svg" alt="Logo Messenger" width="70">
-                            <br>Twitter</a>
+                        <a href="https://m.me/alex.prevots" class="col-md-3 mx-auto"><img src="assets/img/rs/Messenger_Logo_Color_RGB.svg" alt="Logo Messenger" width="40"></a>
+                        <a href="#" class="col-md-3 mx-auto"><img src="assets/img/rs/LI-In-Bug.png" alt="Logo Linkedin" width="50"></a>
+                        <a href="#" class="col-md-3 mx-auto"><img src="assets/img/rs/Twitter_Social_Icon_Circle_Color.svg" alt="Logo Messenger" width="40"></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer class="text-center">
+        <img src="assets/img/logo-prevots-color.png" alt="Logo Alexandre Prévots" width="60">
+        <br>
+        <br>
+        <p class="mentions"><b>© Pandemia Studio - 2020</b></p>
+    </footer>
 
     <script src="assets/src/bootstrap-4.4.1-dist/js/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

@@ -31,6 +31,14 @@ canvas {
     vertical-align: bottom;
 }
 
+.only-desktop {
+    display: block;
+}
+
+.only-mobile {
+    display: none;
+}
+
 //Colors
 $main-gradient: linear-gradient( 109.6deg,
 rgba(41,
@@ -48,6 +56,7 @@ rgba(103,
 $main-color: #0B1E38;
 $second-color: #00B69D;
 $link-color: #C9285A;
+$link-hover: #a51a45;
 $color-works-tags: #adb6ff;
 .second-color {
     color: $second-color;
@@ -201,6 +210,13 @@ body {
     background: $link-color;
     color: #fff;
     padding: 1em;
+    &:hover {
+        background: $link-hover;
+        box-shadow: $boxShadow;
+        color: #fff!important;
+        transform: translateY(3px);
+        transition: ease-in 0.2s;
+    }
 }
 
 //Links
@@ -409,7 +425,7 @@ HOME
 .anim-scroll-down {
     width: 7%;
     #scroll1 {
-        animation: scrollDown1 2s infinite linear;
+        animation: scrollDown1 2s 0.1s infinite linear;
     }
     #scroll2 {
         animation: scrollDown2 2s infinite linear;
@@ -436,7 +452,7 @@ HOME
     0% {
         opacity: 0;
     }
-    25% {
+    15% {
         opacity: 0.1;
     }
     100% {
@@ -449,7 +465,7 @@ HOME
         opacity: 0;
         transform: translateY(-25px);
     }
-    45% {
+    30% {
         opacity: 1;
         transform: translateY(0);
     }
@@ -575,6 +591,7 @@ Contact form
 
 #home-contact {
     color: #fff;
+    padding: 3em 0;
     background: $main-color;
     background-image: -webkit-repeating-linear-gradient(135deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .1) 3px);
     background-image: -moz-repeating-linear-gradient(135deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .1) 3px);
@@ -583,19 +600,51 @@ Contact form
     -webkit-background-size: 4px 4px;
     -moz-background-size: 4px 4px;
     background-size: 4px 4px;
-    .home-contact-right-container {
-        background: #fff;
-        color: #333;
-        padding: 10em 0;
-        p {
-            color: $link-color;
-        }
+    h2 {
+        color: #fff!important;
     }
-    .home-contact-left-container {
+    .home-contact-social-medias {
         padding: 3em 0;
+    }
+    .main-button {
+        width: 30%;
     }
 }
 
+
+/*************************************************************
+Footer
+*************************************************************/
+
+footer {
+    background: #fff;
+    padding: 1em;
+    color: $main-color;
+    .mentions {
+        font-size: 0.8em;
+    }
+}
+
+
+/*************************************************************
+Works details
+*************************************************************/
+.work-detail {
+    background: $main-color;
+    padding: 2em 0;
+    color: #fff;
+}
+.link-back{
+    color: #fff;
+    margin-left: 2em;
+    &:hover{
+        color: #fff;
+        img{
+            transform: translateX(-5px);
+            transition: ease-in 0.3s;
+        }
+    }
+}
 
 /*************************************************************
 MEDIA QUERIES
@@ -621,8 +670,16 @@ MEDIA QUERIES
         padding: 0 1em 1em 1em;
         font-size: 3rem;
     }
+    /*WORKS*/
     .title-cards-project {
+        margin: 1em 0;
         font-size: 2.8em;
+    }
+    .only-desktop {
+        display: none;
+    }
+    .only-mobile {
+        display: block;
     }
     #home-image-myself {
         background: none;
@@ -643,11 +700,22 @@ MEDIA QUERIES
             margin: 0!important;
         }
     }
+    /*CONTACT*/
+    #home-contact {
+        .main-button {
+            width: 60%;
+        }
+        .home-contact-social-medias {
+            img {
+                margin: 2em 0;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 768px) {
-    #home-image-myself-mobile{
-            display: none;
+    #home-image-myself-mobile {
+        display: none;
     }
 }
 
