@@ -629,22 +629,25 @@ footer {
 /*************************************************************
 Works details
 *************************************************************/
+
 .work-detail {
     background: $main-color;
     padding: 2em 0;
     color: #fff;
 }
-.link-back{
+
+.link-back {
     color: #fff;
     margin-left: 2em;
-    &:hover{
+    &:hover {
         color: #fff;
-        img{
+        img {
             transform: translateX(-5px);
             transition: ease-in 0.3s;
         }
     }
 }
+
 
 /*************************************************************
 MEDIA QUERIES
@@ -672,7 +675,7 @@ MEDIA QUERIES
     }
     /*WORKS*/
     .title-cards-project {
-        margin: 1em 0;
+        margin: 1em 0 0 0;
         font-size: 2.8em;
     }
     .only-desktop {
@@ -700,6 +703,12 @@ MEDIA QUERIES
             margin: 0!important;
         }
     }
+    
+    /* CORPORATION*/
+    #home-corporation {
+        background-position: 53% 0%;
+    }
+    
     /*CONTACT*/
     #home-contact {
         .main-button {
