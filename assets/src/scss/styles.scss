@@ -670,8 +670,8 @@ Works details
 
 .link-back {
     color: #fff;
-    padding-top: 1.5em;
     margin-left: 2em;
+    z-index: 999;
     &:hover {
         color: #fff;
         img {
