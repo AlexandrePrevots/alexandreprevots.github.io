@@ -22,22 +22,119 @@
 </head>
 
 <body>
-    <section class="container-fluid overflow-hidden work-detail">
-        <a href="index.html#home-works" class="link-back"><img src="assets/img/ic/ic-arrow_left.png"> back</a><br><br>
-        
-        <div class="container">
-        
-        <h2 class="title-container-white font-bold text-center">Matmut voice</h2>
-        <br> 
-        
-        <div class="row">
-            <div class="col-sm-6"><img class="img-fluid" src="assets/img/works/card-work-hackathon-matmut.jpg"></div>
-            <div class="col-sm-6"><p>For further informations about the event : <a href="https://www.matmut.fr/hackathon/index.html">https://www.matmut.fr/hackathon/index.html</a></p></div>
+    <!-- Navigation DESKTOP -->
+    <nav id="navigation-desktop" class="position-fixed">
+        <div class="close-menu">
+            <div class="closeMenu"><img src="assets/img/ic/ic-close.svg" alt="icon menu"><span class="align-middle">Fermer</span></div>
         </div>
-        
+
+        <div id="navigation-split" class="container d-flex">
+            <ul class="Menu-list" data-offset="10">
+                <a href="index.html#home" class="navigation-links-close">
+                    <li class="Menu-list-item" data-offset="20" onclick>
+                        Home
+                        <span class="Mask"><span>Home</span></span>
+                        <span class="Mask"><span>Home</span></span>
+                    </li>
+                </a>
+                <a href="index.html#home-about_me" class="navigation-links-close">
+                    <li class="Menu-list-item" data-offset="20" onclick>
+                        About
+                        <span class="Mask"><span>About</span></span>
+                        <span class="Mask"><span>About</span></span>
+                    </li>
+                </a>
+                <a href="index.html#work-matmutvoice" class="navigation-links-close">
+                    <li class="Menu-list-item" data-offset="12" onclick>
+                        Works
+                        <span class="Mask"><span>Works</span></span>
+                        <span class="Mask"><span>Works</span></span>
+                    </li>
+                </a>
+                <a href="index.html#home-contact" class="navigation-links-close">
+                    <li class="Menu-list-item" data-offset="8" onclick>
+                        Contact
+                        <span class="Mask"><span>Contact</span></span>
+                        <span class="Mask"><span>Contact</span></span>
+                    </li>
+                </a>
+                <!--<a href="#" class="navigation-links-close">-->
+                <li class="Menu-list-item" data-offset="8" onclick>
+                    UX blog (soon)
+                    <span class="Mask"><span>UX blog (soon)</span></span>
+                    <span class="Mask"><span>UX blog (soon)</span></span>
+                </li>
+                <!--</a>-->
+            </ul>
+        </div>
+    </nav>
+
+    <div class="black-screen-menu position-fixed closeMenu"></div>
+
+    <!-- Navigation -->
+    <div id="main-menu" class="position-fixed">
+        <div id="openMenu"><img src="assets/img/ic/ic-menu.svg" alt="icon menu"><span class="align-middle">Menu</span></div>
+    </div>
+
+
+
+    <section class="container-fluid work-detail">
+        <a href="index.html#work-matmutvoice" class="link-back sticky-top"><img src="assets/img/ic/ic-arrow_left.png"> back</a>
+        <br>
+        <br>
+
+        <div class="container">
+
+            <h2 class="title-work-detail text-center">Matmut voice</h2>
+            <p class="home-works-tags text-center">UX/UI design</p>
+            <br>
+
+            <div class="row">
+                <div class="col-sm-12 text-center"><img class="img-fluid" src="assets/img/works/matmut-voice/screen-matmut-voice.jpg" alt="screenshot-matmut-voice"></div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>I participated in the hackathon organized by Matmut on June 25 and 26, 2016</p>
+
+                    <div class="def">
+                        <p class="vertical-align-left"><img src="assets/img/ic/ic-tip.svg" width="24"> <span class="def-title vertical-align"><b>What is a hackathon ?</b></span>
+                            <br>
+                            <br> Contraction of "hack" and "marathon", the hackathon is an event where several teams meet to develop a digital project (application, website, software ...) in a very limited period (a day, a night or a week -end). A jury made up of business and digital experts chooses and rewards the winners.</p>
+                    </div>
+                    <br>
+                    <p>With a team composed on site, our mission was to answer in 24h to the following issue : "How the Matmut can she become a digital reference for young drivers ?"</p>
+
+
+                    <p>For further informations about the event : <a href="https://www.matmut.fr/hackathon/index.html">https://www.matmut.fr/hackathon/index.html</a></p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-6 text-left">
+                <p>From a common reflection, we worked on a mobile application by integrating a voice assistant "Matmut Voice" which safely accompanies young drivers.<br>
+                Users can ask the chatbot about various information on their vehicle (example: how to change a tire ? How to maintain my car ?) and assist users in the event of a disaster (call a tow truck, a repairer ...).</p>
+                
+                <p>I mainly worked on the interface design of the application (screens, icons and logo).</p>
+                </div>
+                <div class="col-sm-6 text-center"><img class="img-fluid" src="assets/img/works/matmut-voice/interface-in-situ-matmut-voice.jpg" alt="Interface in situ of Matmut Voice"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 text-center work-detail-second-container">The jury (including the main director of Matmut) gave us the second price</div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-12 text-center"><img class="img-fluid" src="assets/img/works/matmut-voice/podium-hackathon-matmut.jpg" alt="Podium Hackathon Matmut"></div>
+            </div>
+
         </div>
         <div id="particles-js" class="particles-js"></div>
     </section>
+
+
 
     <footer class="text-center">
         <img src="assets/img/logo-prevots-color.png" alt="Logo Alexandre Prévots" width="60">
@@ -56,10 +153,10 @@
     <!-- TILT 3D -->
     <script src="assets/src/js/tilt/tilt.jquery.min.js"></script>
 
-    <!-- WOW -->
-    <script src="assets/src/js/wow/wow.min.js"></script>
+    <!-- Scroll anim -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        new WOW().init();
+        AOS.init();
     </script>
 
     <!-- Particles js -->

@@ -173,6 +173,10 @@ h2 {
     margin: auto;
 }
 
+.vertical-align-left {
+    margin: auto 0.5em;
+}
+
 //Shadows
 $boxShadow: 0 1px 1px 0 rgba(60,
 64,
@@ -402,7 +406,8 @@ $split-thickness: 4px;
 
 /* ---- particles.js container ---- */
 
-#particles-js, .particles-js {
+#particles-js,
+.particles-js {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -549,8 +554,8 @@ WORKS
 .title-cards-project {
     color: $second-color;
     text-transform: uppercase;
-    font-family: $title-font;
-    font-size: 3em;
+    font-family: $main-font;
+    font-size: 3.5em;
     z-index: 1;
 }
 
@@ -607,7 +612,7 @@ Contact form
     }
     .home-contact-social-medias {
         padding: 5em 0 3em 0;
-        h3{
+        h3 {
             margin: 1em 0;
         }
     }
@@ -641,10 +646,31 @@ Works details
     color: #fff;
     position: relative;
     z-index: 0;
+    .title-work-detail {
+        font-size: 5em;
+        color: $second-color;
+        font-family: $main-font;
+    }
+    .work-detail-second-container {
+        background: $second-color;
+        background-image: -webkit-repeating-linear-gradient(135deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .1) 3px);
+        background-image: -moz-repeating-linear-gradient(135deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .1) 3px);
+        background-image: -o-repeating-linear-gradient(135deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .1) 3px);
+        background-image: repeating-linear-gradient(135deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .1) 1px, transparent 2px, transparent 2px, rgba(0, 0, 0, .1) 3px);
+        -webkit-background-size: 4px 4px;
+        -moz-background-size: 4px 4px;
+        background-size: 4px 4px;
+        margin: 4em 0 2em 0;
+        padding: 2em;
+    }
+    .home-works-tags{
+        margin-bottom: 3em;
+    }
 }
 
 .link-back {
     color: #fff;
+    padding-top: 1.5em;
     margin-left: 2em;
     &:hover {
         color: #fff;
@@ -653,6 +679,12 @@ Works details
             transition: ease-in 0.3s;
         }
     }
+}
+
+.def {
+    border-left: 3px solid $second-color;
+    padding-left: 1em;
+    display: flex;
 }
 
 
@@ -710,12 +742,10 @@ MEDIA QUERIES
             margin: 0!important;
         }
     }
-    
     /* CORPORATION*/
     #home-corporation {
         background-position: 53% 0%;
     }
-    
     /*CONTACT*/
     #home-contact {
         .main-button {
