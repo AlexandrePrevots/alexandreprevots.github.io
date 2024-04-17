@@ -1,434 +1,400 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Portfolio de alexandre Prevots">
-    <meta name="author" content="alexandre prevots">
+    <title>Alexandre Prevots, UX designer | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Works and projects of Alexandre Prevots">
+    <meta name="keywords" content="portfolio, web, design, ux, ui, colors, animation, images, music">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <link rel="icon" href="favicon.ico">
 
-    <title>Portfolio | Alexandre Prevots</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/src/bootstrap-4.4.1-dist/css/bootstrap.min.css">
 
-    <!-- 
-************************
-        CSS 
-************************ 
--->
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom -->
+    <link rel="stylesheet" type="text/css" href="assets/src/css/styles.css">
 
-    <!-- Style global -->
-    <link href="custom.css" rel="stylesheet">
-
-    <!-- 
-************************
-        PLUGINS 
-************************ 
--->
-
-    <!-- ScrollReveal -->
-    <script src="assets/js/reveal/scrollreveal.js"></script>
-    <script>
-        window.sr = ScrollReveal();
-
-        // Add class to <html> if ScrollReveal is supported
-        if (sr.isSupported()) {
-            document.documentElement.classList.add('sr');
-        }
-    </script>
-
-    <style>
-        /* Ensure elements load hidden before ScrollReveal runs */
-        
-        .sr .fooReveal {
-            visibility: hidden;
-        }
-        /* add perspective to your container */
-        
-        .fooContainer {
-            perspective: 800px;
-        }
-    </style>
-
-    <!-- Masonry -->
-    <script src="assets/js/masonry/masonry.pkgd.js"></script>
-
-    <!-- Smooth Scroll -->
-    <script src="assets/js/smooth_scroll/smooth-scroll.js"></script>
-
-    <!-- 
-************************
-        DEBUG 
-************************ 
--->
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="assets/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <!-- Animate -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/src/css/animate.css">
 </head>
 
 <body>
 
-    <div class="site-wrapper">
+    <!-- Navigation DESKTOP -->
+    <nav id="navigation-desktop" class="position-fixed">
+        <div class="close-menu">
+            <div class="closeMenu"><img src="assets/img/ic/ic-close.svg" alt="icon menu"><span class="align-middle">Fermer</span></div>
+        </div>
 
-        <div class="site-wrapper-inner">
+        <div id="navigation-split" class="container d-flex">
+            <ul class="Menu-list" data-offset="10">
+                <a href="#home" class="navigation-links-close">
+                    <li class="Menu-list-item" data-offset="20" onclick>
+                        Home
+                        <span class="Mask"><span>Home</span></span>
+                        <span class="Mask"><span>Home</span></span>
+                    </li>
+                </a>
+                <a href="#home-about_me" class="navigation-links-close">
+                    <li class="Menu-list-item" data-offset="20" onclick>
+                        About
+                        <span class="Mask"><span>About</span></span>
+                        <span class="Mask"><span>About</span></span>
+                    </li>
+                </a>
+                <a href="#home-works" class="navigation-links-close">
+                    <li class="Menu-list-item" data-offset="12" onclick>
+                        Works
+                        <span class="Mask"><span>Works</span></span>
+                        <span class="Mask"><span>Works</span></span>
+                    </li>
+                </a>
+                <a href="#home-contact" class="navigation-links-close">
+                    <li class="Menu-list-item" data-offset="8" onclick>
+                        Contact
+                        <span class="Mask"><span>Contact</span></span>
+                        <span class="Mask"><span>Contact</span></span>
+                    </li>
+                </a>
+                <!--<a href="#" class="navigation-links-close">-->
+                    <li class="Menu-list-item" data-offset="8" onclick>
+                        UX blog (soon)
+                        <span class="Mask"><span>UX blog (soon)</span></span>
+                        <span class="Mask"><span>UX blog (soon)</span></span>
+                    </li>
+                <!--</a>-->
+            </ul>
+        </div>
+    </nav>
 
-            <div class="cover-container">
+    <div class="black-screen-menu position-fixed closeMenu"></div>
 
+    <!-- Navigation -->
+    <div id="main-menu" class="position-fixed">
+        <div id="openMenu"><img src="assets/img/ic/ic-menu.svg" alt="icon menu"><span class="align-middle">Menu</span></div>
+    </div>
 
+    <!-- Ajouter data-tilt pour effet 3D -->
 
-                <!-- scrolling up -->
+    <!-- Home -->
+    <img id="home-image-myself-mobile" src="assets/img/alexandre-prevots-profil.webp" alt="Photo d'Alexandre Prévots" class="img-fluid">
+    <section id="home" class="container-fluid">
+        <div id="home-main_entrance" class="row">
+            <div id="home-image-myself" class="col-lg-6 col-sm-12"></div>
+            <div id="home-texte-presentation" class="col-lg-6 col-sm-12 text-center">
+                <div>
+                    <img id="home-texte-presentation-logo" src="assets/img/logo-prevots.png" alt="logo" width="150" data-aos="zoom-in" data-aos-duration="1000">
+                    <h1 data-aos="fade-up" data-aos-duration="500">Hi! I'm Alexandre <span class="text-uppercase font-bold">Prevots</span></h1>
+                    <br>
+                    <p class="second-color" data-aos="fade-up" data-aos-duration="900">A French <span class="text-line metalhead">metalhead</span> <span class="font-bold">lead UX - UI Designer</span></p>
+                    <br>
+                    <br>
 
+                   <a href="#home-about_me">
+                    <svg class="anim-scroll-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 48">
+                        <path id="scroll3" fill="#fff" d="M12 42.779l.319-.197-5.359-8.667-5.004-8.095h20.088l-5.004 8.095-5.359 8.667.319.197.319-.197-.319.197.319.197 5.359-8.667 5.712-9.239H.61l5.712 9.239L12 43.492l.319-.516z" />
+                        <path id="scroll1" opacity=".3" fill="#fff" d="M12 30.412l.319-.197-5.359-8.667-5.004-8.095h20.088l-5.004 8.095-5.359 8.667.319.197.319-.197-.319.197.319.197 5.359-8.667 5.712-9.239H.61l5.712 9.239L12 31.125l.319-.516z" />
+                        <path id="scroll2" opacity=".1" fill="#fff" d="M12 18.5l.319-.197L6.96 9.636 1.956 1.542h20.088L17.04 9.636l-5.359 8.667.319.197.319-.197L12 18.5l.319.197 5.359-8.666L23.39.792H.61l5.712 9.239L12 19.213l.319-.516z" />
+                    </svg>
+                    </a>
 
-                <div id="header" class="masthead clearfix">
-                    <div class="inner">
-                        <a href="#" id="main-logo" alt="Lien home page" class="masthead-brand hvr-pulse"><img src="img/logo_prevots-b.png" alt="Logo Alexandre Prevots"></a>
-                        <nav>
-                            <ul class="nav masthead-nav">
-                                <li class="hvr-underline-reveal"><a data-scroll href="#">Home</a></li>
-                                <li class="hvr-underline-reveal"><a data-scroll href="#section_about">À propos</a></li>
-                                <li class="hvr-underline-reveal"><a data-scroll href="#section_featured">Réalisations</a></li>
-                                <li class="hvr-underline-reveal"><a data-scroll href="#section_contact">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
                 </div>
+                <div id="particles-js"></div>
+            </div>
+        </div>
+    </section>
 
-                <div class="container_presentation">
-                    <div class="presentation">
-                        <div class="presentation_text">
-                            <h1 class="cover_heading reveal_basic">Alexandre Prevots</h1>
-                            <p class="lead reveal_basic2">UX / UI DESIGNER.</p>
-                            <a data-scroll href="#section_about" class="scroll_icon hvr-sink">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" style="enable-background:new 0 0 100 100;" xml:space="preserve" fill="#fff">
-                                    <path d="M56.6,79.6L50,86.2l-6.6-6.6c-0.8-0.8-2-0.8-2.8,0s-0.8,2,0,2.8l8,8C49,90.8,49.5,91,50,91s1-0.2,1.4-0.6l8-8  c0.8-0.8,0.8-2,0-2.8S57.4,78.8,56.6,79.6z" />
-                                    <path d="M59.4,68.6c-0.8-0.8-2-0.8-2.8,0L50,75.2l-6.6-6.6c-0.8-0.8-2-0.8-2.8,0s-0.8,2,0,2.8l8,8C49,79.8,49.5,80,50,80  s1-0.2,1.4-0.6l8-8C60.2,70.6,60.2,69.4,59.4,68.6z" />
-                                    <path d="M68,45V27c0-9.9-8.1-18-18-18s-18,8.1-18,18v18c0,9.9,8.1,18,18,18S68,54.9,68,45z M50,59c-7.7,0-14-6.3-14-14V27  c0-7.7,6.3-14,14-14s14,6.3,14,14v18C64,52.7,57.7,59,50,59z" />
-                                    <path d="M50,20c-1.1,0-2,0.9-2,2v6c0,1.1,0.9,2,2,2c1.1,0,2-0.9,2-2v-6C52,20.9,51.1,20,50,20z" />
-                                </svg>
-                            </a>
-                        </div>
 
-                    </div>
-                    <div class="cd-background-wrapper">
-                        <figure class="cd-floating-background">
-                            <img src="img/photos/made_by_prevots_alexandre.jpg" alt="image-1">
-                            <img src="img/photos/detoure-made_by_prevots_alexandre.png" alt="image-2">
-                            <!--<img src="img/cd-img-3.png" alt="image-3">-->
-                        </figure>
-                    </div>
+    <!-- About me -->
+    <section id="home-about_me" class="container-fluid overflow-hidden">
+        <h2 class="title-container font-bold" data-aos="fade-down-right">About me</h2>
+        <div class="row justify-content-center m-4" data-aos="fade-up">
+            <div class="col-md-4 col-sm-11">
+                <p class="text-justify">I'm graduated with a master's degree in UX design at <a href="https://www.ecole-multimedia.com/fr/nos-formations/formation-en-alternance/creation-digitale/ux-designer-1319.html" class="link" target="_blank"><b>L'École Multimédia</b></a> in Paris since 2017.
+                    <br>User experience has changed my vision of designing in everyday life and my way of managing projects. The user approach is very important to me in order to bring them the best satisfaction and the best positive experience.</p>
+            </div>
+            <div class="col-md-4 col-sm-11">
+                <p class="text-justify">I am currently working as a lead designer in user experience and interface. With my team of 5 designers, I lead how to conjugue the best user/customer experience and the business approach of my company and it will be great to share with you directly by message or call.</p>
+                <a href="https://www.linkedin.com/in/alexandre-prevots-24050397" class="link">Discover my LinkedIn Account <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path id="arrow-right-blue-to-white" fill="#0B1E38" d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"/></svg></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- WORKS -->
+    <section id="home-works" class="container-fluid overflow-hidden">
+        <h2 class="title-container-white font-bold" data-aos="fade-down-right">Works</h2>
+
+        <div class="container">
+            <!-- Card left -->
+            <div id="work-trex" class="row justify-content-center home-works-card">
+                <div class="col-sm-4" data-aos="fade-right">
+                    <img src="assets/img/works/card-cheques.webp" class="img-fluid" data-tilt alt="">
                 </div>
+                <div class="col-sm-5 text-left pl-5" data-aos="fade-up">
+                    <h3 class="glitch title-cards-project text-left" data-text="Chèques cadeaux métropole Rouen Normandie">Chèques cadeaux métropole Rouen Normandie</h3>
+                    <p class="home-works-tags">Design UX-UI</p>
+                    <br>
 
-
+                    <h5><b>Website creation with dev agency</b></h5>
+                    <p class="text-left font-light">In collaboration with Métropole Rouen Normandie</p>
+                    <a href="#" class="link white">Soon <img src="assets/img/ic/ic-arrow_right.svg" alt=""></a>
+                </div>
             </div>
 
-        </div>
+            <!-- Card right -->
+            <div id="work-trex" class="row justify-content-center home-works-card">
+                <!--Only mobile-->
+                <div class="col-sm-4 only-mobile" data-aos="fade-up">
+                    <img src="assets/img/works/card-interviews.webp" class="img-fluid" data-tilt alt="">
+                </div>
+                <!-- -->
+                <div class="col-sm-5 text-right pr-5" data-aos="fade-right">
+                    <h3 class="glitch-right title-cards-project" data-text="Interviews">Interviews</h3>
+                    <p class="home-works-tags">Évangélisation UX</p>
+                    <br>
+                    <h5><b>Interviews for students with the French Federation of Insurances and Onisep</b></h5>
+                    <p class="text-right font-light">Share my vision of UX and my daily working in Matmut"
+                    </p>
+                    <a href="interviews.html" class="link white">Discover the project <img src="assets/img/ic/ic-arrow_right.svg" alt=""></a>
+                </div>
+                <div class="col-sm-4 only-desktop" data-aos="fade-left">
+                    <img src="assets/img/works/card-interviews.webp" class="img-fluid" data-tilt alt="">
+                </div>
+            </div>  
 
-    </div>
 
-    <div id="section_about" class="col-xs-12 col-sm-12 col-md-12">
-        <div class="col-xs-12 col-sm-12 col-md-12 title_about">
-            <h2>À votre service pour vous apporter la meilleure expertise du digital</h2></div>
-        <div class="col-xs-12 col-sm-4 col-md-4 bloc_about">
-            <img src="img/about/user_experience.svg" class="reveal_icon1">
-            <div class="reveal_txt1 about-texte">
-                <h3>UX Design (User Experience Design)</h3>
-                <p>Rendre l'expérience utilisateur la plus positive possible par rapport à un produit ou un service.</p>
-                <p>Concevoir <b>pour</b> l'utilisateur et <b>avec</b> l'utilisateur, tel est ma devise d'UX designer.</p>
-                <p><q><i>Lorsque l’expérience de l’utilisateur est supérieure à l’attente de l’utilisateur, la confiance est établie.</i></q>
-                    <br><b> Colm Tuite – Designer d’application.</b></p>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4 bloc_about">
-            <img src="img/about/ui_interface.svg" class="reveal_icon2">
-            <div class="reveal_txt2 about-texte">
-                <h3>UI Design (User Interface Design)</h3>
-                <p>Créer des interfaces design, ergonomiques et responsive.</p>
-                <p><q><i>Le design, c’est la créativité associée à la stratégie.</i></q>
-                    <br><b>Rob Curedale – Designer produit.</b></p>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4 bloc_about">
-            <img src="img/about/ic_movie_creation_white_24px.svg" class="reveal_icon3">
-            <div class="reveal_txt3 about-texte">
-                <h3>Motion Design</h3>
-                <p>Blablabla Blablabla Blablabla Blablabla Blablabla Blablabla</p>
-                <p><q><i>En terme de graphisme, il y a selon moi deux choses essentielles, la simplicité et la clarté.<br> Un bon design nait de ces deux éléments.</i></q>
-                    <br><b>Lindon Leader – Designer graphique.</b></p>
-            </div>
-        </div>
-    </div>
+            <!-- Card left -->
+            <div id="work-trex" class="row justify-content-center home-works-card">
+                <div class="col-sm-4" data-aos="fade-right">
+                    <img src="assets/img/works/card-work-hackathon-toshiba.jpg" class="img-fluid" data-tilt alt="Work Hackathon Toshiba">
+                </div>
+                <div class="col-sm-5 text-left pl-5" data-aos="fade-up">
+                    <h3 class="glitch title-cards-project text-left" data-text="T-REX">T-REX</h3>
+                    <p class="home-works-tags">UX / UI design</p>
+                    <br>
+                    <h5><img src="assets/img/ic/ic-trophy.svg" width="32" alt="Icon price"> <span class="align-middle">1<sup>st</sup> place at the Toshiba Hackathon</span></h5>
+                    <br>
 
-    <div id="section_work" class="col-xs-12 col-sm-12 col-md-12">
-        <div class="col-xs-12 col-sm-12 col-md-12 title_work">
-            <h2>Ils m'ont fait confiance</h2></div>
-        <div class="col-xs-12 col-sm-12 col-md-12 logo-agence">
-            <div class="logo-matmut col-xs-12 col-sm-12 col-md-6">
-                <a href="http://matmut.fr" target="_blank" class="hvr-grow"><img src="img/about/logo-matmut.svg"></a>
+                    <h5><b>Improve your life, share your experience</b></h5>
+                    <p class="text-left font-light">Project implemented in 24 hours with the subject "Imagine the ultimate collaborative working tool in digital signage".</p>
+                    <a href="hackathon-toshiba.html" class="link white">Discover the project <img src="assets/img/ic/ic-arrow_right.svg" alt=""></a>
+                </div>
             </div>
-            <div class="logo-comite_jumelage_elbeuf col-xs-12 col-sm-12 col-md-6"><img src="img/about/logo-jumelage-elbeuf.jpg"></div>
-        </div>
-    </div>
 
-    <div id="section_featured" class="col-xs-12 col-sm-12 col-md-12">
-        <div class="title_featured">
-            <h2>Réalisations</h2></div>
-        <div class="col-xs-12 col-sm-12 col-md-6 visuel_featured reveal_left">
-            <div class="img_featured">
-                <a href="ressources/pdf/Livrable-maf.pdf" target="_blank"><img src="img/portfolio/refonte-musee_arts_forains.jpg"></a>
+
+            <!-- Card right -->
+            <div id="work-newsomatic" class="row justify-content-center home-works-card">
+                <!--Only mobile-->
+                <div class="col-sm-4 only-mobile" data-aos="fade-up">
+                    <img src="assets/img/works/card-work-newsomatic.jpg" class="img-fluid" data-tilt alt="Work News-O-Matic">
+                </div>
+                <!-- -->
+                <div class="col-sm-5 text-right pr-5" data-aos="fade-right">
+                    <h3 class="glitch-right title-cards-project" data-text="News-O-Matic">News-O-Matic</h3>
+                    <p class="home-works-tags">UX design</p>
+                    <br>
+                    <h5><b>Improving the user experience of the application News-O-Matic</b></h5>
+                    <p class="text-right font-light">Final project of my master's degree with the customer "News-O-Matic". I've used the UX methodology to answer the issue "How to develop the News-O-Matic application internationally while increasing its number of sales ?"
+                    </p>
+                    <a href="newsomatic.html" class="link white">Discover the project <img src="assets/img/ic/ic-arrow_right.svg" alt=""></a>
+                </div>
+                <div class="col-sm-4 only-desktop" data-aos="fade-left">
+                    <img src="assets/img/works/card-work-newsomatic.jpg" class="img-fluid" data-tilt alt="Work News-O-Matic">
+                </div>
+            </div>
+
+
+            <!-- Card left -->
+            <div id="work-museeartsforains" class="row justify-content-center home-works-card">
+                <div class="col-sm-4" data-aos="fade-right">
+                    <img src="assets/img/works/card-work-musee-arts-forains.jpg" class="img-fluid" data-tilt alt="Work Musée des Arts Forains">
+                </div>
+                <div class="col-sm-5 text-left pl-5" data-aos="fade-up">
+                    <h3 class="glitch title-cards-project text-left" data-text="Musée des Arts Forains">Musée des Arts Forains</h3>
+                    <p class="home-works-tags">UX / UI design</p>
+                    <br>
+
+                    <h5><b>Redesign of the website of "Musée des Arts Forains"</b></h5>
+                    <p class="text-left font-light">Project of my master's degree.
+                        <br> How to support the user before, during and after his visit, by mixing utility, use and mobile experience ? What means can be used to provide users with an unforgettable experience, both in the real world and in the virtual world ?
+                    </p>
+                    <a href="musee-arts-forains.html" class="link white">Discover the project <img src="assets/img/ic/ic-arrow_right.svg" alt=""></a>
+                </div>
+            </div>
+
+
+            <!-- Card right -->
+            <div id="work-cooke" class="row justify-content-center home-works-card">
+                <!--Only mobile-->
+                <div class="col-sm-4 only-mobile" data-aos="fade-up">
+                    <img src="assets/img/works/card-work-cooke.jpg" class="img-fluid" data-tilt alt="Work Cook-e">
+                </div>
+                <!-- -->
+                <div class="col-sm-5 text-right pr-5" data-aos="fade-right">
+                    <h3 class="glitch-right title-cards-project " data-text="Cook-e">Cook-e</h3>
+                    <p class="home-works-tags">UX / UI / Service design</p>
+                    <br>
+                    <h5><b>Bring the stars in your kitchen</b></h5>
+                    <p class="text-right font-light">Project of my master's degree. Creation of a connected object and its mobile application responding to a daily problem : learning to cook.
+                    </p>
+                    <a href="cooke.html" class="link white">Discover the project <img src="assets/img/ic/ic-arrow_right.svg" alt=""></a>
+                </div>
+                <div class="col-sm-4 only-desktop" data-aos="fade-left">
+                    <img src="assets/img/works/card-work-cooke.jpg" class="img-fluid" data-tilt alt="Work Cook-e">
+                </div>
+            </div>
+
+
+
+            <!-- Card left -->
+            <div id="work-matmutvoice" class="row justify-content-center home-works-card">
+                <div class="col-sm-4" data-aos="fade-right">
+                    <img src="assets/img/works/card-work-hackathon-matmut.jpg" class="img-fluid" data-tilt alt="Work hackathon Matmut">
+                </div>
+                <div class="col-sm-5 text-left pl-5" data-aos="fade-up">
+                    <h3 class="glitch title-cards-project text-left" data-text="Matmut voice">Matmut voice</h3>
+                    <p class="home-works-tags">UX / UI design</p>
+                    <br>
+                    <h5><img src="assets/img/ic/ic-trophy.svg" width="32" alt="icon price"> <span class="align-middle">2<sup>nd</sup> place at the Matmut Hackathon</span></h5>
+                    <br>
+                    <h5><b>Your accomplice to take the road</b></h5>
+                    <p class="text-left font-light">Project implemented in 24 hours with the subject
+                        <br> "How the Matmut can she become a digital reference for young drivers ?".
+                    </p>
+                    <a href="hackathon-matmut.html" class="link white">Discover the project <img src="assets/img/ic/ic-arrow_right.svg" alt=""></a>
+                </div>
+            </div>
+
+
+            <!-- Card right -->
+            <div id="work-matmut" class="row justify-content-center home-works-card">
+                <!--Only mobile-->
+                <div class="col-sm-4 only-mobile" data-aos="fade-up">
+                    <img src="assets/img/works/card-work-matmut.jpg" class="img-fluid" data-tilt alt="Work Matmut">
+                </div>
+                <!-- -->
+                <div class="col-sm-5 text-right pr-5" data-aos="fade-right">
+                    <h3 class="glitch-right title-cards-project " data-text="Matmut">Matmut</h3>
+                    <p class="home-works-tags">UX / UI design / Front-end web development</p>
+                    <br>
+                    <h5><b>Redesign of the website and the app</b></h5>
+                    <p class="text-right font-light">
+                        Redesign of the website in mobile first and improvement of the application "Ma Matmut".
+                    </p>
+                    <a href="matmut.html" class="link white">Discover the project <img src="assets/img/ic/ic-arrow_right.svg" alt=""></a>
+                </div>
+                <div class="col-sm-4 only-desktop" data-aos="fade-left">
+                    <img src="assets/img/works/card-work-matmut.jpg" class="img-fluid" data-tilt alt="Work Matmut">
+                </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 description_featured reveal_bottom">
-            <div class="contenu_featured">
-                <h3>Refonte du site web du Musée des Arts Forains en mobile first</h3>
-                <h4>Travaux pratiques "Service Design" - UX Design - L'École Multimédia</h4>
-                <p>L'objectif de ce TP était de travailler sur l'organisation d'une journée type avec des clients (fictif) avec des ateliers pour générer un nouveau concept en fin de journée.
-                </p>
+        <div id="particles-js2" class="particles-js"></div>
+    </section>
+
+
+    <!--  They trust me : corporation -->
+    <section id="home-corporation" class="container-fluid overflow-hidden">
+        <h2 class="title-container-white font-bold" data-aos="fade-down-right">They trust me</h2>
+        <div class="container">
+            <div id="home-corporation-logos" class="row text-center">
+                <div class="col-md-4 col-sm-12 vertical-align" data-aos="fade-up"><img src="assets/img/corporation/logo-matmut.svg" alt="Logo Matmut" class="img-fluid" width="130"></div>
+                <div class="col-md-4 col-sm-12 vertical-align" data-aos="fade-down"><img src="assets/img/corporation/logo-digiworks.svg" alt="Logo Digiworks" class="img-fluid" width="250"></div>
+                <div class="col-md-4 col-sm-12 vertical-align" data-aos="fade-down"><img src="assets/img/corporation/logo-metropole-rouen-normandie.svg" alt="Logo Rouen Métropole Normandie" class="img-fluid" width="250"></div>
+                <div class="col-md-4 col-sm-12 vertical-align" data-aos="fade-down"><img src="assets/img/corporation/Toshiba_logo.svg" alt="Logo Toshiba" class="img-fluid" width="160"></div>
+                <div class="col-md-4 col-sm-12 vertical-align" data-aos="fade-up"><img src="assets/img/corporation/logo-jumelage-elbeuf.png" alt="Logo Comité de jumelage de la ville d'Elbeuf" class="img-fluid" width="100"></div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!--  Contact form -->
+    <section id="home-contact" class="container-fluid overflow-hidden">
+        <div class="row">
+            <div class="col-md-12 home-contact-left-container">
+                <h2 class="title-container-white font-bold" data-aos="fade-down-right">Contact me</h2>
                 <br>
-                <a href="ressources/pdf/Livrable-maf.pdf" target="_blank" alt="Lien vers le pdf" class="btn_portfolio hvr-grow">Lien vers le pdf de la présentation <img src="img/icons/ic_keyboard_arrow_right_white_24px.svg"></a>
+                <div class="text-center" data-aos="fade-up">
+                    <a href="mailto:alexandreprevots.pro@gmail.com?subject=Contact from your website" class="text-center align-middle">
+                        <button type="button" class="btn main-button"><img src="assets/img/ic/ic-email.svg" alt=""> by email</button>
+                    </a>
+                </div>
             </div>
-        </div>
-    </div>
-
-    <div id="section_portfolio" class="col-xs-12 col-sm-12 col-md-12">
-        <!--<div id="projet1" class="cards col-xs-4 col-sm-4 col-md-4"></div>-->
-        <div class="container-fluid">
-            <!-- add extra container element for Masonry -->
-            <div class="grid">
-                <!-- items use Bootstrap .col- classes -->
-                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
-                    <!-- wrap item content in its own element -->
-
-                    <div id="projet1" class="grid-item-content"></div>
-                    <div class="projet_description">
-                        <div>
-                            <h4>Innovation day</h4>
-                            <p>Travaux pratiques "Service Design" - UX Design - L'École Multimédia...</p>
-                            <a href="projets/projet-innovation_day.html">
-                                <button type="button" class="btn btn-primary">Découvrir le projet</button>
-                            </a>
-                        </div>
+            <div class="col-md-12 home-contact-social-medias">
+                <h3 class="text-center"><b>or</b> on social medias</h3>
+                <br>
+                <div class="container text-center">
+                    <div class="row">
+                        <a href="https://m.me/alex.prevots" class="col-md-3 mx-auto"><img src="assets/img/rs/Messenger_Logo_Color_RGB.svg" alt="Logo Messenger" width="50"></a>
+                        <a href="https://www.linkedin.com/in/alexandre-prevots-24050397" class="col-md-3 mx-auto"><img src="assets/img/rs/LI-In-Bug.png" alt="Logo Linkedin" width="60"></a>
+                        <a href="https://twitter.com/alexprevots" class="col-md-3 mx-auto"><img src="assets/img/rs/Twitter_Social_Icon_Circle_Color.svg" alt="Logo Messenger" width="50"></a>
                     </div>
                 </div>
-                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
-                    <div id="projet2" class="grid-item-content"></div>
-                    <div class="projet_description">
-                        <div>
-                            <h4>2</h4>
-                            <p>Travaux pratiques "Service Design" - UX Design - L'École Multimédia...</p>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".projet2">Découvrir le projet</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
-                    <div id="projet3" class="grid-item-content"></div>
-                    <div class="projet_description">Bonjour</div>
-                </div>
-                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
-                    <div id="projet4" class="grid-item-content"></div>
-                    <div class="projet_description">Bonjour</div>
-                </div>
-                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
-                    <!-- wrap item content in its own element -->
-                    <div id="projet5" class="grid-item-content"></div>
-                    <div class="projet_description">Bonjour</div>
-                </div>
-                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
-                    <div id="projet6" class="grid-item-content"></div>
-                    <div class="projet_description">Bonjour</div>
-
-                </div>
-                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
-                    <div id="projet1" class="grid-item-content"></div>
-                    <div class="projet_description">Bonjour</div>
-                </div>
-                <div class="grid-item col-xs-12 col-sm-6 col-md-3">
-                    <div id="projet1" class="grid-item-content"></div>
-                    <div class="projet_description">Bonjour</div>
-                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-
-    <!-- *************************
-            MODALS 
-************************************ -->
-
-    <div class="modal fade projet1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h3 class="modal-title" id="myModalLabel">Innovation day</h3>
-                </div>
-                <div class="modal-body">
-                    <h4>Travaux pratiques "Service Design" - UX Design - L'École Multimédia</h4>
-                    <p>L'objectif de ce TP était de travailler sur l'organisation d'une journée type avec des clients (fictif) avec des ateliers pour générer un nouveau concept en fin de journée.
-                    </p>
-                    <a href="#" alt="Lien vers le pdf">Lien vers le pdf de la présentation</a>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade projet2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h3 class="modal-title" id="myModalLabel">Innovation day</h3>
-                </div>
-                <div class="modal-body">
-                    <h4>Travaux pratiques "Service Design" - UX Design - L'École Multimédia</h4>
-                    <p>L'objectif de ce TP était de travailler sur l'organisation d'une journée type avec des clients (fictif) avec des ateliers pour générer un nouveau concept en fin de journée.
-                    </p>
-                    <a href="#" alt="Lien vers le pdf">Lien vers le pdf de la présentation</a>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- *************************
-            CONTACT 
-************************************ -->
-
-    <div id="section_contact" class="col-xs-12 col-sm-12 col-md-12">
-        <div class="col-xs-12 col-sm-12 col-md-12 title_work">
-            <h2>Contactez-moi !</h2></div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <a class="bouton_contact hvr-back-pulse" href="mailto:alexandre-prevots@orange.fr?Subject=Contact%20depuis%20le%20portfolio"><img src="img/icons/ic_mail_white_24px.svg"> Envoyez-moi un mail</a>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <p class="choix-contact">ou sur les réseaux sociaux :</p>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 reseaux_sociaux">
-            <div class="col-xs-12 col-sm-12 col-md-4 icons-reseaux_sociaux">
-                <a href="#" class="hvr-grow"><img src="img/icons/lk_icon.svg"></a>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 icons-reseaux_sociaux">
-                <a href="#" class="hvr-grow"><img src="img/icons/fb_icon.svg"></a>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 icons-reseaux_sociaux">
-                <a href="#" class="hvr-grow"><img src="img/icons/tw_icon.svg"></a>
-            </div>
-        </div>
-
-    </div>
-
-
-    <footer class="col-xs-12 col-sm-12 col-md-12">
-        <div>
-            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Portfolio</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="alexandreprevots.github.io" property="cc:attributionName" rel="cc:attributionURL">Alexandre Prevots</a> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">licence Creative Commons Attribution - Pas d&#39;Utilisation Commerciale - Pas de Modification 4.0 International</a>.
-        </div>
+    <footer class="text-center">
+        <img src="assets/img/logo-prevots-color.png" alt="Logo Alexandre Prévots" width="60">
+        <br>
+        <br>
+        <p class="mentions"><b>© Pandemia Studio - 2024</b></p>
     </footer>
 
-    <a href="#0" class="cd-top">Top</a>
+    <script src="assets/src/bootstrap-4.4.1-dist/js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="assets/src/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Custom jQuery -->
+    <script src="assets/src/js/scripts.js"></script>
+
+    <!-- TILT 3D -->
+    <script src="assets/src/js/tilt/tilt.jquery.min.js"></script>
+
+    <!-- Scroll anim -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')
-    </script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
-
-    <!-- Parallax movement -->
-    <script type="text/javascript" src="assets/js/parallax_move/main.js"></script>    
-    
-    <!-- Back to top -->
-    <script type="text/javascript" src="assets/js/backtotop/backtotop.js"></script>
-
-   
-    <!-- Reveal -->
-    <script>
-        // Changing the defaults
-        window.sr = ScrollReveal({
-            reset: true
-        });
-
-        // Customizing a reveal set
-        sr.reveal('.reveal_basic', {
-            duration: 1000
-        });
-        sr.reveal('.reveal_basic2', {
-            duration: 600,
-            delay: 600
-        });
-
-        sr.reveal('.reveal_left', {
-            origin: 'left',
-            distance: '50rem',
-            duration: 1200
-        });
-        sr.reveal('.reveal_bottom', {
-            origin: 'bottom',
-            distance: '50rem',
-            duration: 1600
-        });
-        // Bloc about
-        sr.reveal('.reveal_icon1', {
-            duration: 700
-        });
-        sr.reveal('.reveal_icon2', {
-            duration: 700,
-            delay: 300
-        });
-        sr.reveal('.reveal_icon3', {
-            duration: 700,
-            delay: 600
-        });
-        sr.reveal('.reveal_txt1', {
-            duration: 700,
-            delay: 100
-        });
-        sr.reveal('.reveal_txt2', {
-            duration: 700,
-            delay: 400
-        });
-        sr.reveal('.reveal_txt3', {
-            duration: 700,
-            delay: 700
-        });
+        AOS.init();
     </script>
 
-    <!-- Smooth Scroll -->
-    <script>
-        smoothScroll.init();
-    </script>
+    <!-- Particles js -->
+    <script src="assets/src/js/particles/particles.min.js"></script>
+    <script src="assets/src/js/particles/app.js"></script>
 
-    <!-- Sticky header -->
-    <!-- <script type="text/javascript" src="assets/js/sticky_header/jquery.sticky.js"></script>
-      <script>
-    $(window).load(function(){
-      $("#header").sticky({ topSpacing: 0 });
+
+    <!-- Smooth scroll cross navigateur -->
+    <!--<script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
     });
-  </script>-->
-
+    </script>-->
 </body>
 
 </html>
